@@ -1,4 +1,4 @@
-package com.github.flaviodev.dp.modelo;
+package com.github.flaviodev.dp.model;
 
 public class ItemOrcamento {
 

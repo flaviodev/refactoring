@@ -1,7 +1,7 @@
 package com.github.flaviodev.dp.strategy;
 
-import com.github.flaviodev.dp.modelo.Imposto;
-import com.github.flaviodev.dp.modelo.Orcamento;
+import com.github.flaviodev.dp.model.Imposto;
+import com.github.flaviodev.dp.model.Orcamento;
 
 public class CalculadorDeImposto {
 

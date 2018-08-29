@@ -1,8 +1,8 @@
 package com.github.flaviodev.dp.observer;
 
 import com.github.flaviodev.dp.builder.OrcamentoBuilder;
-import com.github.flaviodev.dp.modelo.ItemOrcamento;
-import com.github.flaviodev.dp.modelo.Orcamento;
+import com.github.flaviodev.dp.model.ItemOrcamento;
+import com.github.flaviodev.dp.model.Orcamento;
 
 public class TestaEfetuaAcoesAposOrcamento {
 	public static void main(String[] args) {

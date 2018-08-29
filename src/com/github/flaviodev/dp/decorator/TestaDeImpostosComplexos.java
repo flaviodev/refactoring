@@ -1,10 +1,10 @@
 package com.github.flaviodev.dp.decorator;
 
 import com.github.flaviodev.dp.builder.OrcamentoBuilder;
-import com.github.flaviodev.dp.modelo.ICMS;
-import com.github.flaviodev.dp.modelo.ISS;
-import com.github.flaviodev.dp.modelo.ItemOrcamento;
-import com.github.flaviodev.dp.modelo.Orcamento;
+import com.github.flaviodev.dp.model.ICMS;
+import com.github.flaviodev.dp.model.ISS;
+import com.github.flaviodev.dp.model.ItemOrcamento;
+import com.github.flaviodev.dp.model.Orcamento;
 
 public class TestaDeImpostosComplexos {
 

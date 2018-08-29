@@ -3,8 +3,8 @@ package com.github.flaviodev.dp.builder;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.github.flaviodev.dp.modelo.ItemOrcamento;
-import com.github.flaviodev.dp.modelo.Orcamento;
+import com.github.flaviodev.dp.model.ItemOrcamento;
+import com.github.flaviodev.dp.model.Orcamento;
 import com.github.flaviodev.dp.observer.AcaoAposCriarOrcamento;
 
 public class OrcamentoBuilder {
