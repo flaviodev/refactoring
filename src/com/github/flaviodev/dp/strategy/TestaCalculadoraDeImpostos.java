@@ -11,7 +11,5 @@ public class TestaCalculadoraDeImpostos {
 		
 		calculadora.realizaCalculo(orcamento, new ISS());
 		calculadora.realizaCalculo(orcamento, new ICMS());
-		
 	}
-	
 }
