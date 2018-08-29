@@ -11,7 +11,7 @@ public class TestaDeImpostosComplexos {
 	public static void main(String[] args) {
 
 		Orcamento orcamento = new OrcamentoBuilder().paraCliente("cliente").doVendedor("vendedor")
-				.adicionaItem(new ItemOrcamento("notebook").setQuantidade(2).setValor(2500)).constroi();
+				.adicionaItem(new ItemOrcamento("notebook", 2, 2500)).constroi();
 
 		System.out.println(new ICMS(new ISS()).calculaImposto(orcamento));
 

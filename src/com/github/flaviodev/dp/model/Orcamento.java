@@ -44,7 +44,7 @@ public class Orcamento {
 		getItens().add(item);
 	}
 	
-	protected void setItens(List<ItemOrcamento> itens) {
+	public void setItens(List<ItemOrcamento> itens) {
 		
 		this.itens = itens;
 	}

@@ -8,7 +8,7 @@ public class TestaEfetuaAcoesAposOrcamento {
 	public static void main(String[] args) {
 
 		Orcamento orcamento = new OrcamentoBuilder().paraCliente("cliente").doVendedor("vendedor")
-				.adicionaItem(new ItemOrcamento("notebook").setQuantidade(2).setValor(2500))
+				.adicionaItem(new ItemOrcamento("notebook", 2, 2500))
 				.adicionaAcao(new EnviaOrcamentoPorEmail()).adicionaAcao(new ImprimeOrcamento())
 				.adicionaAcao(new NotificaDepartamentoDeVendas()).constroi();
 		

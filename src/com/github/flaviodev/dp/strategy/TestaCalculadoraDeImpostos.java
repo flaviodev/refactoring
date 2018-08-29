@@ -10,7 +10,7 @@ public class TestaCalculadoraDeImpostos {
 
 	public static void main(String[] args) {
 		Orcamento orcamento = new OrcamentoBuilder().paraCliente("cliente").doVendedor("vendedor")
-				.adicionaItem(new ItemOrcamento("notebook").setQuantidade(1).setValor(1000)).constroi();
+				.adicionaItem(new ItemOrcamento("notebook", 1, 1900)).constroi();
 		CalculadorDeImposto calculadora = new CalculadorDeImposto();
 
 		calculadora.realizaCalculo(orcamento, new ISS());

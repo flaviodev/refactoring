@@ -6,17 +6,14 @@ public class ItemOrcamento {
 	private String descricao;
 	private double quantidade;
 
-	public ItemOrcamento(String descricao) {
+	public ItemOrcamento(String descricao, double valor, double quantidade) {
 		this.descricao = descricao;
+		this.valor = valor;
+		this.quantidade = quantidade;
 	}
 
 	public double getValor() {
 		return valor;
-	}
-
-	public ItemOrcamento setValor(double valor) {
-		this.valor = valor;
-		return this;
 	}
 
 	public String getDescricao() {
@@ -31,9 +28,12 @@ public class ItemOrcamento {
 		return quantidade;
 	}
 
-	public ItemOrcamento setQuantidade(double quantidade) {
+	public void setQuantidade(double quantidade) {
 		this.quantidade = quantidade;
-		return this;
+	}
+
+	public void setValor(double valor) {
+		this.valor = valor;
 	}
 
 	public double getTotalItem() {

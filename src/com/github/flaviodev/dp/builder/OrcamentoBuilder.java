@@ -9,52 +9,49 @@ import com.github.flaviodev.dp.observer.AcaoAposCriarOrcamento;
 
 public class OrcamentoBuilder {
 
-	private Orcamento orcamento;
+	private String nomeCliente;
+	private String nomeVendedor;
+	private List<ItemOrcamento> itens;
 	private List<AcaoAposCriarOrcamento> acoes;
 
 	public OrcamentoBuilder() {
 		
-		orcamento = new Orcamento();
+		itens = new ArrayList<>();
 		acoes = new ArrayList<>();
 	}
 	
 	public OrcamentoBuilder paraCliente(String nomeCliente) {
 		
-		orcamento.setNomeCliente(nomeCliente);
+		this.nomeCliente = nomeCliente;
 		return this;
 	}
 	
 	public OrcamentoBuilder doVendedor(String nomeVendedor) {
 		
-		orcamento.setNomeVendedor(nomeVendedor);
+		this.nomeVendedor = nomeVendedor;
 		return this;
 	}
 	
 	public OrcamentoBuilder adicionaItem(ItemOrcamento item) {
 		
-		orcamento.adicionaItem(item);
+		itens.add(item);
 		return this;
-	}
-	
-	public List<AcaoAposCriarOrcamento> getAcoes() {
-		
-		return acoes;
-	}
-
-	protected void setAcoes(List<AcaoAposCriarOrcamento> acoes) {
-		
-		this.acoes = acoes;
 	}
 
 	public OrcamentoBuilder adicionaAcao(AcaoAposCriarOrcamento acao) {
 		
-		getAcoes().add(acao);
+		acoes.add(acao);
 		return this;
 	}
 	
 	public Orcamento constroi() {
 		
-		getAcoes().forEach(acao -> acao.executa(orcamento));
+		Orcamento orcamento = new Orcamento();
+		orcamento.setNomeCliente(nomeCliente);
+		orcamento.setNomeVendedor(nomeVendedor);
+		orcamento.setItens(itens);
+		
+		acoes.forEach(acao -> acao.executa(orcamento));
 		
 		return orcamento;
 	}
