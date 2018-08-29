@@ -1,12 +1,20 @@
-package com.github.flaviodev.dp.strategy.impostos;
+package com.github.flaviodev.dp.modelo;
 
-import com.github.flaviodev.dp.strategy.Orcamento;
+public class ICMS extends Imposto {
 
-public class ICMS implements Imposto {
+	public ICMS() {
+
+	}
+	
+	public ICMS(Imposto outroImposto) {
+
+		super(outroImposto);
+	}
 
 	@Override
 	public double calculaImposto(Orcamento orcamento) {
-		return orcamento.getValor() * 0.1;
+		
+		return orcamento.getValor() * 0.1 + calculaOutroImposto(orcamento);
 	}
 
 }

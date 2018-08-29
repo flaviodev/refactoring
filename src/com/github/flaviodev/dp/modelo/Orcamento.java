@@ -1,4 +1,4 @@
-package com.github.flaviodev.dp.strategy;
+package com.github.flaviodev.dp.modelo;
 
 public class Orcamento {
 

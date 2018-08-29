@@ -1,7 +1,8 @@
 package com.github.flaviodev.dp.strategy;
 
-import com.github.flaviodev.dp.strategy.impostos.ICMS;
-import com.github.flaviodev.dp.strategy.impostos.ISS;
+import com.github.flaviodev.dp.modelo.ICMS;
+import com.github.flaviodev.dp.modelo.ISS;
+import com.github.flaviodev.dp.modelo.Orcamento;
 
 public class TestaCalculadoraDeImpostos {
 
