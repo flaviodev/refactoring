@@ -7,7 +7,7 @@ public class CalculadorDeImposto {
 
 	public void realizaCalculo(Orcamento orcamento, Imposto imposto) {
 
-			System.out.println(imposto.calculaImposto(orcamento));
+		System.out.println(imposto.calculaImposto(orcamento));
 	}
 
 }
