@@ -38,6 +38,10 @@ public class OrcamentoBuilder {
 		return this;
 	}
 
+	public List<ConstroiOrcamentoObserver> getAcoes() {
+		return acoes;
+	}
+
 	public Orcamento constroi() {
 
 		Orcamento orcamento = new Orcamento();
