@@ -17,8 +17,7 @@ public class OrcamentoObserverTest {
 	@Test
 	public void deveImprimirAposCriarOrcamento() {
 
-		OrcamentoBuilder orcamentoBuilder = new OrcamentoBuilder();
-		orcamentoBuilder.paraCliente(FabricaTest.criaCliente())
+		OrcamentoBuilder orcamentoBuilder = FabricaTest.criaOrcamentoBuilderSemItens()
 				.adicionaItem(new ItemOrcamento("Teclado Wifi MacBook", 1000, 1));
 		orcamentoBuilder.adicionaAcao(new ImprimeOrcamento());
 
@@ -34,8 +33,7 @@ public class OrcamentoObserverTest {
 	@Test
 	public void deveEnviarEmailAposCriarOrcamento() {
 
-		OrcamentoBuilder orcamentoBuilder = new OrcamentoBuilder();
-		orcamentoBuilder.paraCliente(FabricaTest.criaCliente())
+		OrcamentoBuilder orcamentoBuilder = FabricaTest.criaOrcamentoBuilderSemItens()
 				.adicionaItem(new ItemOrcamento("Mouse Wifi MacBook", 500, 1));
 		orcamentoBuilder.adicionaAcao(new EnviaOrcamentoPorEmail());
 
@@ -52,11 +50,8 @@ public class OrcamentoObserverTest {
 	@Test
 	public void deveSalvarAposCriarOrcamento() {
 
-		OrcamentoBuilder orcamentoBuilder = new OrcamentoBuilder();
-		orcamentoBuilder.paraCliente(FabricaTest.criaCliente()).adicionaItem(new ItemOrcamento("MacBook Pro", 10000, 1))
-				.adicionaItem(new ItemOrcamento("Mochila para notebook", 250, 1));
+		OrcamentoBuilder orcamentoBuilder = FabricaTest.criaOrcamentoBuilderComUmItem();
 		orcamentoBuilder.adicionaAcao(new PersisteOrcamento());
-
 		Orcamento orcamento = orcamentoBuilder.constroi();
 
 		assertFalse("Orçamento não devia ter sido enviado por email", orcamento.isEnviadoPorEmail());
@@ -69,11 +64,9 @@ public class OrcamentoObserverTest {
 	@Test
 	public void deveEnviarPorEmailESalvarAposCriarOrcamento() {
 
-		OrcamentoBuilder orcamentoBuilder = new OrcamentoBuilder();
-		orcamentoBuilder.paraCliente(FabricaTest.criaCliente()).adicionaItem(new ItemOrcamento("MacBook Pro", 10000, 1))
+		OrcamentoBuilder orcamentoBuilder = FabricaTest.criaOrcamentoBuilderComUmItem()
 				.adicionaItem(new ItemOrcamento("Mochila para notebook", 250, 1));
 		orcamentoBuilder.adicionaAcao(new EnviaOrcamentoPorEmail()).adicionaAcao(new PersisteOrcamento());
-
 		Orcamento orcamento = orcamentoBuilder.constroi();
 
 		assertTrue("Orçamento devia ter sido enviado por email", orcamento.isEnviadoPorEmail());
@@ -82,5 +75,4 @@ public class OrcamentoObserverTest {
 		assertFalse("Cliente devia ter sido salvo", orcamento.getCliente().isTransient());
 		orcamento.getItens().forEach(item -> assertFalse("Item orçamento devia ter sido salvo", item.isTransient()));
 	}
-
 }
