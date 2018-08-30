@@ -1,0 +1,286 @@
+2018-08-29 20:49:27 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: DeltaPU
+	...]
+2018-08-29 20:49:28 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 20:49:28 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 20:49:28 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 20:49:28 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 20:49:29 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 20:49:29 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 20:49:30 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-29 20:49:30 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:jpadelta]
+2018-08-29 20:49:30 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-29 20:49:30 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-29 20:49:30 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-29 20:49:31 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-08-29 20:51:13 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: DeltaPU
+	...]
+2018-08-29 20:51:13 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 20:51:13 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 20:51:13 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 20:51:13 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 20:51:13 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 20:51:13 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 20:53:03 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-29 20:53:03 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 20:53:03 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 20:53:03 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 20:53:03 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 20:53:03 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 20:53:03 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 20:54:15 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-29 20:54:16 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 20:54:16 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 20:54:16 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 20:54:16 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 20:54:16 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 20:54:16 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 20:54:17 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-29 20:54:17 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-29 20:54:17 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-29 20:54:17 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-29 20:54:17 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-29 20:54:17 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 20:54:17 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 20:54:17 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 20:54:17 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 20:54:17 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 20:54:17 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 20:54:17 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-08-29 20:58:05 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-29 20:58:06 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 20:58:06 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 20:58:06 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 20:58:06 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 20:58:06 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 20:58:06 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 20:58:07 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-29 20:58:07 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-29 20:58:07 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-29 20:58:07 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-29 20:58:07 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-29 20:58:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 20:58:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 20:58:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 20:58:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 20:58:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 20:58:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 20:58:08 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-08-29 20:59:28 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-29 20:59:28 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 20:59:28 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 20:59:28 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 20:59:28 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 20:59:28 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 20:59:28 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 20:59:29 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-29 20:59:29 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-29 20:59:29 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-29 20:59:29 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-29 20:59:29 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-29 20:59:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 20:59:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 20:59:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 20:59:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 20:59:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 20:59:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 20:59:30 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-08-29 20:59:56 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-29 20:59:56 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 20:59:56 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 20:59:56 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 20:59:56 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 20:59:56 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 20:59:56 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 20:59:57 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-29 20:59:57 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-29 20:59:57 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-29 20:59:57 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-29 20:59:57 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-29 20:59:57 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 20:59:57 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 20:59:57 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 20:59:57 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 20:59:57 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 20:59:57 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 20:59:58 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-08-29 21:00:47 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-29 21:00:47 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 21:00:47 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 21:00:47 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 21:00:47 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 21:00:48 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 21:00:48 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 21:00:48 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-29 21:00:48 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-29 21:00:48 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-29 21:00:48 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-29 21:00:48 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-29 21:00:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 21:00:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 21:00:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 21:00:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 21:00:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 21:00:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 21:00:49 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-08-29 21:02:02 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-29 21:02:02 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 21:02:02 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 21:02:02 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 21:02:02 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 21:02:03 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 21:02:03 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 21:02:03 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-29 21:02:03 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-29 21:02:03 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-29 21:02:03 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-29 21:02:03 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-29 21:02:04 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 21:02:04 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 21:02:04 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 21:02:04 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 21:02:04 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 21:02:04 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 21:02:04 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-08-29 21:26:08 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-29 21:26:08 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 21:26:08 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 21:26:08 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 21:26:09 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 21:26:09 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 21:26:09 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 21:26:10 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-29 21:26:10 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-29 21:26:10 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-29 21:26:10 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-29 21:26:10 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-29 21:26:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 21:26:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 21:26:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 21:26:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 21:26:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 21:26:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 21:29:08 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-29 21:29:08 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 21:29:08 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 21:29:08 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 21:29:08 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 21:29:09 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 21:29:09 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 21:29:09 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-29 21:29:09 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-29 21:29:09 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-29 21:29:09 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-29 21:29:09 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-29 21:29:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 21:29:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 21:29:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 21:29:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 21:29:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 21:29:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 22:03:18 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-29 22:03:19 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 22:03:19 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 22:03:19 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 22:03:19 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 22:03:19 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 22:03:19 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 22:06:16 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-29 22:06:16 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 22:06:16 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 22:06:16 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 22:06:16 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 22:06:17 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 22:06:17 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 22:07:40 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-29 22:07:40 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 22:07:40 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 22:07:40 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 22:07:40 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 22:07:41 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 22:07:41 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 22:07:41 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-29 22:07:41 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-29 22:07:41 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-29 22:07:41 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-29 22:07:41 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-29 22:07:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cliente
+2018-08-29 22:07:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 22:07:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 22:07:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cliente
+2018-08-29 22:07:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 22:07:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 22:07:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cliente
+2018-08-29 22:07:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 22:07:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 22:08:44 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-29 22:08:44 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 22:08:44 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 22:08:44 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 22:08:44 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 22:08:44 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 22:08:44 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 22:08:45 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-29 22:08:45 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-29 22:08:45 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-29 22:08:45 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-29 22:08:45 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-29 22:08:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cliente
+2018-08-29 22:08:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 22:08:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 22:08:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cliente
+2018-08-29 22:08:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 22:08:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 22:08:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cliente
+2018-08-29 22:08:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 22:08:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 22:09:35 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-29 22:09:35 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-29 22:09:35 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-29 22:09:35 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-29 22:09:35 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-29 22:09:35 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-29 22:09:35 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-29 22:09:36 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-29 22:09:36 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-29 22:09:36 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-29 22:09:36 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-29 22:09:36 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-29 22:09:37 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cliente
+2018-08-29 22:09:37 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 22:09:37 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 22:09:37 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cliente
+2018-08-29 22:09:37 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 22:09:37 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
+2018-08-29 22:09:37 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cliente
+2018-08-29 22:09:37 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: ItemOrcamento
+2018-08-29 22:09:37 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Orcamento
