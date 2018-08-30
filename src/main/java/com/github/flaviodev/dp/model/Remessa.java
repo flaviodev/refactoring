@@ -102,4 +102,12 @@ public class Remessa extends BaseEntity<String> {
 	public boolean equals(Object obj) {
 		return super.equals(obj);
 	}
+
+	@Override
+	public String toString() {
+		return String.format("Remessa [id=%s, sequencia=%s, convenio=%s, data=%s]", id, sequencia, convenio,
+				data);
+	}
+	
+	
 }

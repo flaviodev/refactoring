@@ -97,4 +97,12 @@ public class Convenio extends BaseEntity<String> {
 	public boolean equals(Object obj) {
 		return super.equals(obj);
 	}
+
+	@Override
+	public String toString() {
+		return String.format("Convenio [id=%s, numero=%s, cedente=%s, banco=%s, agencia=%s, conta=%s]", id, numero,
+				cedente, banco, agencia, conta);
+	}
+	
+	
 }

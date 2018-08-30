@@ -35,7 +35,7 @@ public class RemessaBuilder implements BuilderRegistro<String, Remessa> {
 		return this;
 	}
 
-	public RemessaBuilder adcionaTitulo(TituloCobranca titulo) {
+	public RemessaBuilder adicionaTitulo(TituloCobranca titulo) {
 		this.titulos.add(titulo);
 		return this;
 	}

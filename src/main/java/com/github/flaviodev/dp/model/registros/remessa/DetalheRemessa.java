@@ -17,11 +17,14 @@ public class DetalheRemessa extends Detalhe {
 
 	@Override
 	public TituloCobranca processaRegistroArquivo() {
+		
+		String registro = getRegistroDoArquivo();
+		
 		TituloCobrancaBuilder builder = getBuilderRegistro().populaRegistro(processaDetalheVinculado());
 
-		builder.comNumero(getRegistroDoArquivo().substring(2, 12).trim());
-		builder.doSacado(new SacadoBuilder().comNomeRazaoSocial(getRegistroDoArquivo().substring(12, 104))
-				.comCpfCnpj(getRegistroDoArquivo().substring(104, 118)).constroi());
+		builder.comNumero(registro.substring(2, 12).trim());
+		builder.doSacado(new SacadoBuilder().comNomeRazaoSocial(registro.substring(12, 104).trim())
+				.comCpfCnpj(registro.substring(104, 118)).constroi());
 
 		TituloCobranca titulo = builder.constroi();
 

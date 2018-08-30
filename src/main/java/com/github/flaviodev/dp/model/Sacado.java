@@ -37,4 +37,11 @@ public class Sacado extends Pessoa {
 	public boolean equals(Object obj) {
 		return super.equals(obj);
 	}
+
+	@Override
+	public String toString() {
+		return String.format("Sacado [id=%s, nomeRazaoSocial=%s, cpfCnpj=%s, email=%s]", getId(), getNomeRazaoSocial(),
+				getCpfCnpj(), email);
+	}
+
 }

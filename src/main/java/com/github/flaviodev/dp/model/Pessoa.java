@@ -73,4 +73,10 @@ public abstract class Pessoa extends BaseEntity<String> {
 
 		return super.hashCode();
 	}
+
+	@Override
+	public String toString() {
+		return String.format("Pessoa [id=%s, nomeRazaoSocial=%s, cpfCnpj=%s]", id, nomeRazaoSocial, cpfCnpj);
+	}
+
 }
