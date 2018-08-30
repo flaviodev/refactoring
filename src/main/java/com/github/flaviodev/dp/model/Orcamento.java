@@ -50,7 +50,7 @@ public class Orcamento extends BaseEntity<String> {
 	public String getId() {
 		return id;
 	}
-	
+
 	public Cliente getCliente() {
 		return cliente;
 	}

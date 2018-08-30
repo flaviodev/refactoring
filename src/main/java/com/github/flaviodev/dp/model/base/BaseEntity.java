@@ -52,7 +52,6 @@ public abstract class BaseEntity<I extends Serializable> implements Serializable
 		if (isTransient())
 			throw new IllegalStateException("Entidade não está persistida");
 
-
 		EntityManager dao = getDao();
 		dao.getTransaction().begin();
 		entidadeAlterada = (E) dao.merge(this);

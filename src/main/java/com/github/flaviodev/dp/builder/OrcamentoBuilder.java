@@ -15,37 +15,37 @@ public class OrcamentoBuilder {
 	private List<ConstroiOrcamentoObserver> acoes;
 
 	public OrcamentoBuilder() {
-		
+
 		itens = new ArrayList<>();
 		acoes = new ArrayList<>();
 	}
-	
+
 	public OrcamentoBuilder paraCliente(Cliente cliente) {
-		
+
 		this.cliente = cliente;
 		return this;
 	}
-	
+
 	public OrcamentoBuilder adicionaItem(ItemOrcamento item) {
-		
+
 		itens.add(item);
 		return this;
 	}
 
 	public OrcamentoBuilder adicionaAcao(ConstroiOrcamentoObserver acao) {
-		
+
 		acoes.add(acao);
 		return this;
 	}
-	
+
 	public Orcamento constroi() {
-		
+
 		Orcamento orcamento = new Orcamento();
 		orcamento.setCliente(cliente);
 		orcamento.setItens(itens);
-		
+
 		acoes.forEach(acao -> acao.executa(orcamento));
-		
+
 		return orcamento;
 	}
 }

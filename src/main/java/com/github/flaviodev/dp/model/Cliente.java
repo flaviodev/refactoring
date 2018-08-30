@@ -39,9 +39,9 @@ public class Cliente extends BaseEntity<String> {
 	private String email;
 
 	public Cliente() {
-		
+
 	}
-	
+
 	public Cliente(String nome, String cpf, String email) {
 		this.nome = nome;
 		this.cpf = cpf;
@@ -52,7 +52,7 @@ public class Cliente extends BaseEntity<String> {
 	public String getId() {
 		return id;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
