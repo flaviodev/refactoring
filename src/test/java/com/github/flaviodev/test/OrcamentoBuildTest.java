@@ -6,9 +6,9 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import com.github.flaviodev.dp.builder.OrcamentoBuilder;
-import com.github.flaviodev.dp.model.Cliente;
 import com.github.flaviodev.dp.model.ItemOrcamento;
 import com.github.flaviodev.dp.model.Orcamento;
+import com.github.flaviodev.dp.model.Sacado;
 import com.github.flaviodev.dp.observer.EnviaOrcamentoPorEmail;
 import com.github.flaviodev.dp.observer.ImprimeOrcamento;
 
@@ -18,8 +18,8 @@ public class OrcamentoBuildTest {
 	private final static String CPF = "222.222.222-22";
 	private final static String EMAIL = "ibere@manualdomundo.com.br";
 
-	private Cliente criaCliente() {
-		return new Cliente(NOME, CPF, EMAIL);
+	private Sacado criaCliente() {
+		return new Sacado(NOME, CPF, EMAIL);
 	}
 
 	private void assertCliente(Orcamento orcamento) {

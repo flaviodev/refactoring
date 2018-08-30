@@ -37,7 +37,7 @@ public class Orcamento extends BaseEntity<String> {
 	private String id;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	private Cliente cliente;
+	private Sacado cliente;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "orcamento")
 	private List<ItemOrcamento> itens;
@@ -51,11 +51,11 @@ public class Orcamento extends BaseEntity<String> {
 		return id;
 	}
 
-	public Cliente getCliente() {
+	public Sacado getCliente() {
 		return cliente;
 	}
 
-	public void setCliente(Cliente cliente) {
+	public void setCliente(Sacado cliente) {
 		this.cliente = cliente;
 	}
 

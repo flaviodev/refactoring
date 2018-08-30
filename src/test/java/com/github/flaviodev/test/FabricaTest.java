@@ -1,8 +1,8 @@
 package com.github.flaviodev.test;
 
 import com.github.flaviodev.dp.builder.OrcamentoBuilder;
-import com.github.flaviodev.dp.model.Cliente;
 import com.github.flaviodev.dp.model.ItemOrcamento;
+import com.github.flaviodev.dp.model.Sacado;
 
 public class FabricaTest {
 
@@ -10,9 +10,9 @@ public class FabricaTest {
 
 	}
 
-	public static Cliente criaCliente() {
+	public static Sacado criaCliente() {
 
-		return new Cliente("Flávio Almeida", "111.111.111-11", "flavio@almeida.com.br");
+		return new Sacado("Flávio Almeida", "111.111.111-11", "flavio@almeida.com.br");
 	}
 
 	public static OrcamentoBuilder criaOrcamentoBuilderSemItens() {

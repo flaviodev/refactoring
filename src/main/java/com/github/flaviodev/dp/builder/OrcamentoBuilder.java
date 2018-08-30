@@ -3,14 +3,14 @@ package com.github.flaviodev.dp.builder;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.github.flaviodev.dp.model.Cliente;
 import com.github.flaviodev.dp.model.ItemOrcamento;
 import com.github.flaviodev.dp.model.Orcamento;
+import com.github.flaviodev.dp.model.Sacado;
 import com.github.flaviodev.dp.observer.ConstroiOrcamentoObserver;
 
 public class OrcamentoBuilder {
 
-	private Cliente cliente;
+	private Sacado cliente;
 	private List<ItemOrcamento> itens;
 	private List<ConstroiOrcamentoObserver> acoes;
 
@@ -20,7 +20,7 @@ public class OrcamentoBuilder {
 		acoes = new ArrayList<>();
 	}
 
-	public OrcamentoBuilder paraCliente(Cliente cliente) {
+	public OrcamentoBuilder paraCliente(Sacado cliente) {
 
 		this.cliente = cliente;
 		return this;
