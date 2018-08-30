@@ -1,6 +1,7 @@
 package com.github.flaviodev.dp.model.registros.base;
 
 import java.io.Serializable;
+import java.lang.reflect.ParameterizedType;
 
 import com.github.flaviodev.dp.builder.BuilderRegistro;
 import com.github.flaviodev.dp.model.base.BaseEntity;
@@ -9,7 +10,6 @@ import com.github.flaviodev.dp.tipo.TipoRegistro;
 public abstract class Registro<I extends Serializable, E extends BaseEntity<I>, B extends BuilderRegistro<I, E>> {
 
 	private String registroDoArquivo;
-	private B builderRegistro;
 	private TipoRegistro tipo;
 	private Long sequenciaNoArquivo;
 
@@ -28,12 +28,17 @@ public abstract class Registro<I extends Serializable, E extends BaseEntity<I>, 
 		return registroDoArquivo;
 	}
 
+	@SuppressWarnings("unchecked")
 	public B getBuilderRegistro() {
-		return builderRegistro;
-	}
+		Class<B> clazzBuilder = (Class<B>) ((ParameterizedType) getClass().getSuperclass().getGenericSuperclass())
+				.getActualTypeArguments()[2];
 
-	public void setBuilderRegistro(B builderRegistro) {
-		this.builderRegistro = builderRegistro;
+		try {
+			return clazzBuilder.newInstance();
+		} catch (InstantiationException | IllegalAccessException e) {
+			return null;
+		}
+
 	}
 
 	public TipoRegistro getTipo() {

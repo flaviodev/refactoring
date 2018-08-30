@@ -30,6 +30,11 @@ public class TituloCobrancaBuilder implements BuilderRegistro<String,TituloCobra
 		return this;
 	}
 
+	public TituloCobrancaBuilder doSacado(Sacado sacado) {
+		this.sacado = sacado;
+		return this;
+	}
+	
 	public TituloCobrancaBuilder comVencimento(Date dataVencimento) {
 		this.dataVencimento = dataVencimento;
 		return this;
@@ -72,31 +77,40 @@ public class TituloCobrancaBuilder implements BuilderRegistro<String,TituloCobra
 			return this;
 		
 		if(titulo.getDataLiquidacao()!=null)
-			titulo.getDataLiquidacao();
+			dataLiquidacao = titulo.getDataLiquidacao();
 		
 		if(titulo.getDataVencimento()!=null)
-			titulo.getDataVencimento();
+			dataVencimento = titulo.getDataVencimento();
 			
 		if(titulo.getEstado()!=null)
-			titulo.getEstado();
+			estado = titulo.getEstado();
 		
 		if(titulo.getNumero()!=null)
-			titulo.getNumero();
+			numero = titulo.getNumero();
 		
 		if(titulo.getPercentualJurosDia()!=null)
-			titulo.getPercentualJurosDia();
+			percentualJurosDia = titulo.getPercentualJurosDia();
 		
-		if(titulo.getSacado()!=null)
-			titulo.getSacado();
+		if(sacado == null) 
+			sacado = new Sacado();
+
+		if(titulo.getSacado()!=null && titulo.getSacado().getNomeRazaoSocial()!=null) 
+			sacado.setNomeRazaoSocial(titulo.getSacado().getNomeRazaoSocial());
+
+		if(titulo.getSacado()!=null && titulo.getSacado().getCpfCnpj()!=null) 
+			sacado.setCpfCnpj(titulo.getSacado().getCpfCnpj());
+		
+		if(titulo.getSacado()!=null && titulo.getSacado().getEmail()!=null) 
+			sacado.setEmail(titulo.getSacado().getEmail());
 		
 		if(titulo.getValor()!=null)
-			titulo.getValor();
+			valor = titulo.getValor();
 		
 		if(titulo.getValorMultaAtraso()!=null)
-			titulo.getValorMultaAtraso();
+			valorMultaAtraso = titulo.getValorMultaAtraso();
 		
 		if(titulo.getValorRecebido()!=null)
-			titulo.getValorRecebido();
+			valorMultaAtraso = titulo.getValorRecebido();
 		
 		return this;
 	}

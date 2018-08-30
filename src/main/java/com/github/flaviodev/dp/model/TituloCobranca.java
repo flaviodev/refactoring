@@ -155,4 +155,14 @@ public class TituloCobranca extends BaseEntity<String> {
 	public boolean equals(Object obj) {
 		return super.equals(obj);
 	}
+
+	@Override
+	public String toString() {
+		return String.format(
+				"TituloCobranca [id=%s, numero=%s, remessa=%s, sacado=%s, dataVencimento=%s, valor=%s, valorMultaAtraso=%s, percentualJurosDia=%s, dataLiquidacao=%s, valorRecebido=%s, estado=%s]",
+				id, numero, remessa, sacado, dataVencimento, valor, valorMultaAtraso, percentualJurosDia,
+				dataLiquidacao, valorRecebido, estado);
+	}
+	
+	
 }

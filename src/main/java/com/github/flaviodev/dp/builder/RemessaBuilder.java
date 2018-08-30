@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.github.flaviodev.dp.model.Convenio;
 import com.github.flaviodev.dp.model.Remessa;
+import com.github.flaviodev.dp.model.Sacado;
 import com.github.flaviodev.dp.model.TituloCobranca;
 
 public class RemessaBuilder implements BuilderRegistro<String, Remessa> {
@@ -48,9 +49,16 @@ public class RemessaBuilder implements BuilderRegistro<String, Remessa> {
 		if (remessa.getSequencia() != null)
 			comSequencia(remessa.getSequencia());
 
-		if (remessa.getConvenio() != null)
-			doConvenio(remessa.getConvenio());
+		if(convenio == null) 
+			convenio = new Convenio();
 
+	
+		// FIXME implementar para convenio
+
+	
+
+		
+		
 		if (remessa.getData() != null)
 			naData(remessa.getData());
 		
