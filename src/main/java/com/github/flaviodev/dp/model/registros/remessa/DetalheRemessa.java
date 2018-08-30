@@ -1,4 +1,4 @@
-package com.github.flaviodev.dp.model.registros;
+package com.github.flaviodev.dp.model.registros.remessa;
 
 import com.github.flaviodev.dp.model.TituloCobranca;
 import com.github.flaviodev.dp.model.registros.base.Detalhe;

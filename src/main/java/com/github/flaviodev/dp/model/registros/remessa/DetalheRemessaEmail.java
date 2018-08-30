@@ -1,12 +1,12 @@
-package com.github.flaviodev.dp.model.registros;
+package com.github.flaviodev.dp.model.registros.remessa;
 
 import com.github.flaviodev.dp.builder.TituloCobrancaBuilder;
 import com.github.flaviodev.dp.model.TituloCobranca;
 import com.github.flaviodev.dp.model.registros.base.Detalhe;
 
-public class DetalheRemessaMulta extends Detalhe {
+public class DetalheRemessaEmail extends Detalhe {
 
-	public DetalheRemessaMulta(String registroDoArquivo, DetalheRemessa registroVinculado) {
+	public DetalheRemessaEmail(String registroDoArquivo, DetalheRemessa registroVinculado) {
 		super(registroDoArquivo, registroVinculado);
 	}
 
