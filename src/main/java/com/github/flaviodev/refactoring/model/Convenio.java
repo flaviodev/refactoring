@@ -103,6 +103,5 @@ public class Convenio extends EntidadeBase<String> {
 		return String.format("Convenio [id=%s, numero=%s, cedente=%s, banco=%s, agencia=%s, conta=%s]", id, numero,
 				cedente, banco, agencia, conta);
 	}
-	
-	
+
 }

@@ -105,9 +105,7 @@ public class Remessa extends EntidadeBase<String> {
 
 	@Override
 	public String toString() {
-		return String.format("Remessa [id=%s, sequencia=%s, convenio=%s, data=%s]", id, sequencia, convenio,
-				data);
+		return String.format("Remessa [id=%s, sequencia=%s, convenio=%s, data=%s]", id, sequencia, convenio, data);
 	}
-	
-	
+
 }

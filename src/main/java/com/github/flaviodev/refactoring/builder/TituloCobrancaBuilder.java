@@ -134,7 +134,7 @@ public class TituloCobrancaBuilder extends RegistroBuilder<String, TituloCobranc
 
 		if (titulo == null)
 			titulo = new TituloCobranca();
-	
+
 		titulo.setDataLiquidacao(dataLiquidacao);
 		titulo.setDataVencimento(dataVencimento);
 		titulo.setEstado(estado);

@@ -65,7 +65,7 @@ public class RemessaBuilder extends RegistroBuilder<String, Remessa> {
 
 		if (remessa == null)
 			remessa = new Remessa();
-		
+
 		remessa.setConvenio(convenio);
 		remessa.setData(data);
 		remessa.setSequencia(sequencia);

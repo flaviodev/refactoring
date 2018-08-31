@@ -4,7 +4,7 @@ import com.github.flaviodev.refactoring.model.Cedente;
 import com.github.flaviodev.refactoring.model.Convenio;
 import com.github.flaviodev.refactoring.tipo.Banco;
 
-public class ConvenioBuilder implements EntidadeBuilder<String,Convenio> {
+public class ConvenioBuilder implements EntidadeBuilder<String, Convenio> {
 
 	private String numero;
 	private Cedente cedente;

@@ -21,7 +21,6 @@ public class DetalheRemessa extends Detalhe {
 		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteTituloObserver());
 	}
 
-
 	@Override
 	public TipoRegistro getTipo() {
 		return TipoRegistro.DETALHE_REMESSA;

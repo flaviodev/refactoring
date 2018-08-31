@@ -24,10 +24,11 @@ public class Cedente extends Pessoa {
 	public boolean equals(Object obj) {
 		return super.equals(obj);
 	}
-	
+
 	@Override
 	public String toString() {
-		return String.format("Cedente [id=%s, nomeRazaoSocial=%s, cpfCnpj=%s]", getId(), getNomeRazaoSocial(), getCpfCnpj());
+		return String.format("Cedente [id=%s, nomeRazaoSocial=%s, cpfCnpj=%s]", getId(), getNomeRazaoSocial(),
+				getCpfCnpj());
 	}
-	
+
 }

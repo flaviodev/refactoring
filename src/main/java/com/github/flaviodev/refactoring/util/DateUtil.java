@@ -54,7 +54,7 @@ public class DateUtil {
 	}
 
 	public static Date toDate(String data, String formato) {
-		
+
 		try {
 			return new SimpleDateFormat(formato).parse(data);
 		} catch (ParseException e) {
