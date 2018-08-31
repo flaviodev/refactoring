@@ -10,11 +10,11 @@ import com.github.flaviodev.refactoring.model.TituloCobranca;
 
 public class RemessaBuilder extends RegistroBuilder<String, Remessa> {
 
+	private Remessa remessa;
 	private Long sequencia;
 	private Convenio convenio;
 	private Date data;
 	private List<TituloCobranca> titulos;
-
 
 	public RemessaBuilder() {
 		titulos = new ArrayList<>();
@@ -46,7 +46,7 @@ public class RemessaBuilder extends RegistroBuilder<String, Remessa> {
 
 		return this;
 	}
-	
+
 	@Override
 	public RemessaBuilder comDadosDeOutraEntidade(Remessa remessa) {
 
@@ -63,14 +63,16 @@ public class RemessaBuilder extends RegistroBuilder<String, Remessa> {
 	@Override
 	public Remessa constroi() {
 
-		Remessa remessa = new Remessa();
+		if (remessa == null)
+			remessa = new Remessa();
+		
 		remessa.setConvenio(convenio);
 		remessa.setData(data);
 		remessa.setSequencia(sequencia);
 		remessa.setTitulos(titulos);
 
-		getAcoesAoConstruir().forEach(acao -> acao.executa(remessa));
-		
+		getAcoesAoConstruir().forEach(acao -> remessa = acao.executa(remessa));
+
 		return remessa;
 	}
 }

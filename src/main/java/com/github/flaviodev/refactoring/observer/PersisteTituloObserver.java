@@ -13,9 +13,7 @@ public class PersisteTituloObserver implements EntidadeBaseObserver<String, Titu
 	private Logger logger = Logger.getLogger(PersisteTituloObserver.class);
 
 	@Override
-	public void executa(TituloCobranca titulo) {
-
-		logger.info("Persistindo título ... ");
+	public TituloCobranca executa(TituloCobranca titulo) {
 
 		EntityManager em = titulo.getEntityManager();
 
@@ -26,11 +24,15 @@ public class PersisteTituloObserver implements EntidadeBaseObserver<String, Titu
 		if (titulo.isTransient())
 			em.persist(titulo);
 		else
-			em.merge(titulo);
+			titulo = em.merge(titulo);
 
 		em.getTransaction().commit();
 
-		logger.info("Título persistido com sucesso!");
+		logger.info("=====================================================================");
+		logger.info("Persistindo Título:  " + titulo);
+		logger.info("=====================================================================\n\n");
+
+		return titulo;
 	}
 
 	private Sacado persisteSacado(Sacado sacado, EntityManager em) {

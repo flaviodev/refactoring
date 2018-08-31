@@ -6,5 +6,5 @@ import com.github.flaviodev.refactoring.model.base.EntidadeBase;
 
 public interface EntidadeBaseObserver<I extends Serializable, E extends EntidadeBase<I>> {
 
-	void executa(E entidade);
+	E executa(E entidade);
 }

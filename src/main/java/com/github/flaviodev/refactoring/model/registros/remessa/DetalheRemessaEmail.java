@@ -6,6 +6,7 @@ import com.github.flaviodev.refactoring.builder.SacadoBuilder;
 import com.github.flaviodev.refactoring.builder.TituloCobrancaBuilder;
 import com.github.flaviodev.refactoring.model.TituloCobranca;
 import com.github.flaviodev.refactoring.model.registros.base.Detalhe;
+import com.github.flaviodev.refactoring.observer.EnviaBoletoParaClienteObserver;
 import com.github.flaviodev.refactoring.tipo.TipoRegistro;
 
 public class DetalheRemessaEmail extends Detalhe {
@@ -14,6 +15,7 @@ public class DetalheRemessaEmail extends Detalhe {
 
 	public DetalheRemessaEmail(String registroDoArquivo, DetalheRemessa registroVinculado) {
 		super(registroDoArquivo, registroVinculado);
+		getBuilderRegistro().adicionaAcaoAoConstruir(new EnviaBoletoParaClienteObserver());
 	}
 
 	@Override

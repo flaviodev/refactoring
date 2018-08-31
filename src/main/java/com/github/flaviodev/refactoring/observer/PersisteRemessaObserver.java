@@ -14,9 +14,7 @@ public class PersisteRemessaObserver implements EntidadeBaseObserver<String, Rem
 	private Logger logger = Logger.getLogger(PersisteRemessaObserver.class);
 
 	@Override
-	public void executa(Remessa remessa) {
-
-		logger.info("Persistindo remessa ... ");
+	public Remessa executa(Remessa remessa) {
 
 		EntityManager em = remessa.getEntityManager();
 
@@ -27,11 +25,15 @@ public class PersisteRemessaObserver implements EntidadeBaseObserver<String, Rem
 		if (remessa.isTransient())
 			em.persist(remessa);
 		else
-			em.merge(remessa);
+			remessa = em.merge(remessa);
 
 		em.getTransaction().commit();
 
-		logger.info("Remessa persistida com sucesso!");
+		logger.info("=====================================================================");
+		logger.info("Persistindo Remessa:  " + remessa);
+		logger.info("=====================================================================\n\n");
+
+		return remessa;
 	}
 
 	private Convenio persisteConvenio(Convenio convenio, EntityManager em) {

@@ -13,17 +13,15 @@ public class DetalheRemessa extends Detalhe {
 	public DetalheRemessa(String registroDoArquivo, Remessa remessa) {
 		super(registroDoArquivo);
 		getBuilderRegistro().naRemessa(remessa);
+		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteTituloObserver());
 	}
 
 	public DetalheRemessa(String registroDoArquivo, DetalheRemessa registroVinculado) {
 		super(registroDoArquivo, registroVinculado);
+		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteTituloObserver());
 	}
 
-	@Override
-	public TituloCobrancaBuilder getBuilderRegistro() {
-		return (TituloCobrancaBuilder) super.getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteTituloObserver());
-	}
-	
+
 	@Override
 	public TipoRegistro getTipo() {
 		return TipoRegistro.DETALHE_REMESSA;

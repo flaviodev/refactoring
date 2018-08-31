@@ -9,6 +9,8 @@ import com.github.flaviodev.refactoring.model.TituloCobranca;
 import com.github.flaviodev.refactoring.tipo.EstadoTitulo;
 
 public class TituloCobrancaBuilder extends RegistroBuilder<String, TituloCobranca> {
+
+	private TituloCobranca titulo;
 	private String numero;
 	private Remessa remessa;
 	private Sacado sacado;
@@ -130,7 +132,9 @@ public class TituloCobrancaBuilder extends RegistroBuilder<String, TituloCobranc
 	@Override
 	public TituloCobranca constroi() {
 
-		TituloCobranca titulo = new TituloCobranca();
+		if (titulo == null)
+			titulo = new TituloCobranca();
+	
 		titulo.setDataLiquidacao(dataLiquidacao);
 		titulo.setDataVencimento(dataVencimento);
 		titulo.setEstado(estado);
@@ -142,8 +146,8 @@ public class TituloCobrancaBuilder extends RegistroBuilder<String, TituloCobranc
 		titulo.setValorMultaAtraso(valorMultaAtraso);
 		titulo.setValorRecebido(valorRecebido);
 
-		getAcoesAoConstruir().forEach(acao -> acao.executa(titulo));
-		
+		getAcoesAoConstruir().forEach(acao -> titulo = acao.executa(titulo));
+
 		return titulo;
 	}
 }

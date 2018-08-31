@@ -1,8 +1,13 @@
 package com.github.flaviodev.refactoring.model.base;
 
+import java.io.Serializable;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
 
 public enum JPAUtil {
 
@@ -18,6 +23,17 @@ public enum JPAUtil {
 	public EntityManager getEntityManager() {
 
 		return this.factory.createEntityManager();
+	}
+
+	public static <I extends Serializable, E extends EntidadeBase<I>> Criteria createCriteria(Class<E> classeEntidade,
+			String alias) {
+
+		return ((Session) INSTANCE.getEntityManager().getDelegate()).createCriteria(classeEntidade, alias);
+	}
+
+	public static <I extends Serializable, E extends EntidadeBase<I>> Criteria createCriteria(Class<E> classeEntidade) {
+
+		return ((Session) INSTANCE.getEntityManager().getDelegate()).createCriteria(classeEntidade);
 	}
 
 	public static String getAlias(String... aliases) {

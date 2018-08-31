@@ -7,6 +7,7 @@ import com.github.flaviodev.refactoring.builder.RemessaBuilder;
 import com.github.flaviodev.refactoring.model.Cedente;
 import com.github.flaviodev.refactoring.model.Remessa;
 import com.github.flaviodev.refactoring.model.registros.base.Cabecalho;
+import com.github.flaviodev.refactoring.observer.PersisteRemessaObserver;
 import com.github.flaviodev.refactoring.tipo.Banco;
 import com.github.flaviodev.refactoring.tipo.TipoRegistro;
 
@@ -16,6 +17,7 @@ public class CabecalhoRemessa extends Cabecalho {
 
 	public CabecalhoRemessa(String registroDoArquivo) {
 		super(registroDoArquivo);
+		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteRemessaObserver());
 	}
 
 	@Override
