@@ -7,6 +7,5 @@ public abstract class Detalhe extends Registro<String, TituloCobranca, TituloCob
 
 	public Detalhe() {
 	}
-	
 
 }

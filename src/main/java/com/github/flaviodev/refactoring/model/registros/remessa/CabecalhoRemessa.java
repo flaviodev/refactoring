@@ -19,7 +19,6 @@ public class CabecalhoRemessa extends Cabecalho {
 	public CabecalhoRemessa() {
 		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteRemessaObserver());
 	}
-	
 
 	@Override
 	public TipoRegistro getTipo() {
@@ -30,13 +29,15 @@ public class CabecalhoRemessa extends Cabecalho {
 	@Override
 	public Remessa processaRegistroArquivo(String registroDoArquivo, Registro registroVinculado) {
 		setRegistroVinculado(registroVinculado);
-		
+
 		RemessaBuilder builder = getBuilderRegistro();
 
 		ConvenioBuilder convenioBuilder = new ConvenioBuilder();
-		convenioBuilder.comNumero(registroDoArquivo.substring(10, 20)).naAgencia(registroDoArquivo.substring(148, 153).trim())
+		convenioBuilder.comNumero(registroDoArquivo.substring(10, 20))
+				.naAgencia(registroDoArquivo.substring(148, 153).trim())
 				.noBanco(Banco.getPeloNumero(registroDoArquivo.substring(125, 128)))
-				.paraCedente(new Cedente(registroDoArquivo.substring(20, 111).trim(), registroDoArquivo.substring(111, 125).trim()))
+				.paraCedente(new Cedente(registroDoArquivo.substring(20, 111).trim(),
+						registroDoArquivo.substring(111, 125).trim()))
 				.paraConta(registroDoArquivo.substring(153, 163).trim());
 
 		builder.comSequencia(Long.parseLong(registroDoArquivo.substring(2, 10))).doConvenio(convenioBuilder.constroi())

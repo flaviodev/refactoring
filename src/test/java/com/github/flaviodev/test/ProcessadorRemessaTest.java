@@ -25,7 +25,7 @@ public class ProcessadorRemessaTest {
 		JPAUtil.createCriteria(Remessa.class).list().forEach(logger::info);
 		JPAUtil.createCriteria(TituloCobranca.class).list().forEach(logger::info);
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	@Test
 	public void deveProcessarRemessaCaixa() {

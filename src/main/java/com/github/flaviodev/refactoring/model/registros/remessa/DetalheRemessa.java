@@ -31,7 +31,7 @@ public class DetalheRemessa extends Detalhe {
 	@Override
 	public TituloCobranca processaRegistroArquivo(String registroDoArquivo, Registro registroVinculado) {
 		setRegistroVinculado(registroVinculado);
-		
+
 		TituloCobrancaBuilder builder = getBuilderRegistro().comNumero(registroDoArquivo.substring(2, 12).trim())
 				.doSacado(new SacadoBuilder().comNomeRazaoSocial(registroDoArquivo.substring(12, 104).trim())
 						.comCpfCnpj(registroDoArquivo.substring(104, 118)).constroi())

@@ -7,7 +7,6 @@ public abstract class Cabecalho extends Registro<String, Remessa, RemessaBuilder
 
 	public Cabecalho() {
 	}
-	
 
 	private Remessa remessa;
 
