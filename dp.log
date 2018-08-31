@@ -642,3 +642,57 @@
 2018-08-30 21:51:24 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0006
 2018-08-30 21:51:24 INFO  DetalheRemessaEmail:33 - TituloCobranca [id=null, numero=123457, remessa=Remessa [id=null, sequencia=1, convenio=Convenio [id=null, numero=0000000001, cedente=Cedente [id=null, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018], sacado=Sacado [id=null, nomeRazaoSocial=CLIENTE2 LTDA, cpfCnpj=11888555000122, email=cliente2@email.com], dataVencimento=Mon Jan 01 00:00:00 BRST 2018, valor=100, valorMultaAtraso=1, percentualJurosDia=0.2, dataLiquidacao=null, valorRecebido=null, estado=AGUARDANDO]
 2018-08-30 21:51:24 INFO  ProcessadorRemessa:102 - 77cliente2@email.com                                                                                                                                                                                0007
+2018-08-30 22:15:04 INFO  CabecalhoRemessa:45 - Remessa [id=null, sequencia=1, convenio=Convenio [id=null, numero=0000000001, cedente=Cedente [id=null, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:15:04 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:15:04 INFO  ProcessadorRemessa:102 - 07    123456CLIENTE LTDA                                                                                11888555000133010120180000010000                                                            0002
+2018-08-30 22:15:04 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0003
+2018-08-30 22:15:04 INFO  DetalheRemessaEmail:33 - TituloCobranca [id=null, numero=123456, remessa=Remessa [id=null, sequencia=1, convenio=Convenio [id=null, numero=0000000001, cedente=Cedente [id=null, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018], sacado=Sacado [id=null, nomeRazaoSocial=CLIENTE LTDA, cpfCnpj=11888555000133, email=cliente@email.com], dataVencimento=Mon Jan 01 00:00:00 BRST 2018, valor=100, valorMultaAtraso=1, percentualJurosDia=0.2, dataLiquidacao=null, valorRecebido=null, estado=AGUARDANDO]
+2018-08-30 22:15:04 INFO  ProcessadorRemessa:102 - 77cliente@email.com                                                                                                                                                                                 0004
+2018-08-30 22:15:04 INFO  ProcessadorRemessa:102 - 07    123457CLIENTE2 LTDA                                                                               11888555000122010120180000010000                                                            0005
+2018-08-30 22:15:04 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0006
+2018-08-30 22:15:04 INFO  DetalheRemessaEmail:33 - TituloCobranca [id=null, numero=123457, remessa=Remessa [id=null, sequencia=1, convenio=Convenio [id=null, numero=0000000001, cedente=Cedente [id=null, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018], sacado=Sacado [id=null, nomeRazaoSocial=CLIENTE2 LTDA, cpfCnpj=11888555000122, email=cliente2@email.com], dataVencimento=Mon Jan 01 00:00:00 BRST 2018, valor=100, valorMultaAtraso=1, percentualJurosDia=0.2, dataLiquidacao=null, valorRecebido=null, estado=AGUARDANDO]
+2018-08-30 22:15:04 INFO  ProcessadorRemessa:102 - 77cliente2@email.com                                                                                                                                                                                0007
+2018-08-30 22:17:39 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:17:40 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:17:40 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:17:40 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:17:40 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:17:40 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:17:40 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:17:40 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:17:41 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:17:41 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:17:41 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:17:41 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:17:41 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:17:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:17:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:17:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:17:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:17:42 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:17:42 INFO  CabecalhoRemessa:52 - Remessa [id=e0132b7ceb6a456bace4a164ebad75f8, sequencia=1, convenio=Convenio [id=147671124ff84d71ad4e13673a33d741, numero=0000000001, cedente=Cedente [id=15d0e1d25c9f4e899d2a081232bf590c, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:17:42 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:17:42 INFO  ProcessadorRemessa:102 - 07    123456CLIENTE LTDA                                                                                11888555000133010120180000010000                                                            0002
+2018-08-30 22:17:42 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0003
+2018-08-30 22:17:42 INFO  DetalheRemessaEmail:33 - TituloCobranca [id=null, numero=123456, remessa=Remessa [id=e0132b7ceb6a456bace4a164ebad75f8, sequencia=1, convenio=Convenio [id=147671124ff84d71ad4e13673a33d741, numero=0000000001, cedente=Cedente [id=15d0e1d25c9f4e899d2a081232bf590c, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018], sacado=Sacado [id=null, nomeRazaoSocial=CLIENTE LTDA, cpfCnpj=11888555000133, email=cliente@email.com], dataVencimento=Mon Jan 01 00:00:00 BRST 2018, valor=100, valorMultaAtraso=1, percentualJurosDia=0.2, dataLiquidacao=null, valorRecebido=null, estado=AGUARDANDO]
+2018-08-30 22:17:42 INFO  ProcessadorRemessa:102 - 77cliente@email.com                                                                                                                                                                                 0004
+2018-08-30 22:17:42 INFO  ProcessadorRemessa:102 - 07    123457CLIENTE2 LTDA                                                                               11888555000122010120180000010000                                                            0005
+2018-08-30 22:17:42 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0006
+2018-08-30 22:17:42 INFO  DetalheRemessaEmail:33 - TituloCobranca [id=null, numero=123457, remessa=Remessa [id=e0132b7ceb6a456bace4a164ebad75f8, sequencia=1, convenio=Convenio [id=147671124ff84d71ad4e13673a33d741, numero=0000000001, cedente=Cedente [id=15d0e1d25c9f4e899d2a081232bf590c, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018], sacado=Sacado [id=null, nomeRazaoSocial=CLIENTE2 LTDA, cpfCnpj=11888555000122, email=cliente2@email.com], dataVencimento=Mon Jan 01 00:00:00 BRST 2018, valor=100, valorMultaAtraso=1, percentualJurosDia=0.2, dataLiquidacao=null, valorRecebido=null, estado=AGUARDANDO]
+2018-08-30 22:17:42 INFO  ProcessadorRemessa:102 - 77cliente2@email.com                                                                                                                                                                                0007

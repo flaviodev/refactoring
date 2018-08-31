@@ -11,7 +11,7 @@ public class PersisteOrcamento implements ConstroiOrcamentoObserver {
 
 		System.out.println("Salvando Orçamento ... ");
 
-		EntityManager dao = orcamento.getDao();
+		EntityManager dao = orcamento.getEntityManager();
 
 		dao.getTransaction().begin();
 

@@ -8,12 +8,13 @@ import com.github.flaviodev.refactoring.model.Convenio;
 import com.github.flaviodev.refactoring.model.Remessa;
 import com.github.flaviodev.refactoring.model.TituloCobranca;
 
-public class RemessaBuilder implements RegistroBuilder<String, Remessa> {
+public class RemessaBuilder extends RegistroBuilder<String, Remessa> {
 
 	private Long sequencia;
 	private Convenio convenio;
 	private Date data;
 	private List<TituloCobranca> titulos;
+
 
 	public RemessaBuilder() {
 		titulos = new ArrayList<>();
@@ -68,6 +69,8 @@ public class RemessaBuilder implements RegistroBuilder<String, Remessa> {
 		remessa.setSequencia(sequencia);
 		remessa.setTitulos(titulos);
 
+		getAcoesAoConstruir().forEach(acao -> acao.executa(remessa));
+		
 		return remessa;
 	}
 }

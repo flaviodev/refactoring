@@ -24,7 +24,7 @@ public abstract class EntidadeBase<I extends Serializable> implements Serializab
 		return getId() == null;
 	}
 
-	public EntityManager getDao() {
+	public EntityManager getEntityManager() {
 
 		return JPAUtil.INSTANCE.getEntityManager();
 	}
@@ -35,7 +35,7 @@ public abstract class EntidadeBase<I extends Serializable> implements Serializab
 		if (!isTransient())
 			throw new IllegalStateException("Entidade já persistida");
 
-		EntityManager dao = getDao();
+		EntityManager dao = getEntityManager();
 		dao.getTransaction().begin();
 		dao.persist(this);
 		dao.getTransaction().commit();
@@ -52,7 +52,7 @@ public abstract class EntidadeBase<I extends Serializable> implements Serializab
 		if (isTransient())
 			throw new IllegalStateException("Entidade não está persistida");
 
-		EntityManager dao = getDao();
+		EntityManager dao = getEntityManager();
 		dao.getTransaction().begin();
 		entidadeAlterada = (E) dao.merge(this);
 		dao.getTransaction().commit();
@@ -66,7 +66,7 @@ public abstract class EntidadeBase<I extends Serializable> implements Serializab
 		if (isTransient())
 			throw new IllegalStateException("Entidade não está persistida");
 
-		EntityManager dao = getDao();
+		EntityManager dao = getEntityManager();
 		dao.getTransaction().begin();
 		dao.remove(dao.merge(this));
 		dao.getTransaction().commit();
