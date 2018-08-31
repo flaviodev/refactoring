@@ -94,31 +94,22 @@ public class ProcessadorRemessa {
 
 				switch (tipo) {
 				case CABECALHO_REMESSA:
-					cabecalhoRemessa.setRegistroDoArquivo(linha);
-					cabecalhoRemessa.processaRegistroArquivo();
+					cabecalhoRemessa.processaRegistroArquivo(linha, null);
 					registro = cabecalhoRemessa;
 					break;
 
 				case DETALHE_REMESSA:
-					detalheRemessa.setRegistroDoArquivo(linha);
-					detalheRemessa.setRegistroVinculado((CabecalhoRemessa) utltimoRegistroPorTipo.get(TipoRegistro.CABECALHO_REMESSA));
-					detalheRemessa.processaRegistroArquivo();
+					detalheRemessa.processaRegistroArquivo(linha, (CabecalhoRemessa) utltimoRegistroPorTipo.get(TipoRegistro.CABECALHO_REMESSA));
 					registro = detalheRemessa;
 					break;
 
 				case DETALHE_REMESSA_DADOS_MULTA:
-					detalheRemessaMulta.setRegistroDoArquivo(linha);
-					detalheRemessaMulta.setRegistroVinculado(
-							(DetalheRemessa) utltimoRegistroPorTipo.get(TipoRegistro.DETALHE_REMESSA));
-					detalheRemessaMulta.processaRegistroArquivo();
+					detalheRemessaMulta.processaRegistroArquivo(linha, (DetalheRemessa) utltimoRegistroPorTipo.get(TipoRegistro.DETALHE_REMESSA));
 					registro = detalheRemessaMulta;
 					break;
 
 				case DETALHE_REMESSA_EMAIL_SACADO:
-					detalheRemessaEmail.setRegistroDoArquivo(linha);
-					detalheRemessaEmail.setRegistroVinculado(
-							(DetalheRemessa) utltimoRegistroPorTipo.get(TipoRegistro.DETALHE_REMESSA));
-					detalheRemessaEmail.processaRegistroArquivo();
+					detalheRemessaEmail.processaRegistroArquivo(linha,(DetalheRemessa) utltimoRegistroPorTipo.get(TipoRegistro.DETALHE_REMESSA));
 					registro = detalheRemessaEmail;
 					break;
 

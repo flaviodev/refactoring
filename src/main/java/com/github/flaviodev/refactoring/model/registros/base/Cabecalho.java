@@ -8,9 +8,6 @@ public abstract class Cabecalho extends Registro<String, Remessa, RemessaBuilder
 	public Cabecalho() {
 	}
 	
-	public Cabecalho(String registroDoArquivo) {
-		super(registroDoArquivo);
-	}
 
 	private Remessa remessa;
 

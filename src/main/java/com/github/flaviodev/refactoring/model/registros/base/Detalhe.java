@@ -8,13 +8,5 @@ public abstract class Detalhe extends Registro<String, TituloCobranca, TituloCob
 	public Detalhe() {
 	}
 	
-	public Detalhe(String registroDoArquivo) {
-		super(registroDoArquivo);
-	}
-
-	public Detalhe(String registroDoArquivo,
-			Registro<String, TituloCobranca, TituloCobrancaBuilder> registroVinculado) {
-		super(registroDoArquivo, registroVinculado);
-	}
 
 }

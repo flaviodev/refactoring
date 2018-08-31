@@ -2,7 +2,6 @@ package com.github.flaviodev.refactoring.model.registros.remessa;
 
 import com.github.flaviodev.refactoring.builder.SacadoBuilder;
 import com.github.flaviodev.refactoring.builder.TituloCobrancaBuilder;
-import com.github.flaviodev.refactoring.model.Remessa;
 import com.github.flaviodev.refactoring.model.TituloCobranca;
 import com.github.flaviodev.refactoring.model.registros.base.Detalhe;
 import com.github.flaviodev.refactoring.model.registros.base.Registro;
@@ -12,17 +11,6 @@ import com.github.flaviodev.refactoring.tipo.TipoRegistro;
 public class DetalheRemessa extends Detalhe {
 
 	public DetalheRemessa() {
-		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteTituloObserver());
-	}
-
-	public DetalheRemessa(String registroDoArquivo, Remessa remessa) {
-		super(registroDoArquivo);
-		getBuilderRegistro().naRemessa(remessa);
-		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteTituloObserver());
-	}
-
-	public DetalheRemessa(String registroDoArquivo, DetalheRemessa registroVinculado) {
-		super(registroDoArquivo, registroVinculado);
 		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteTituloObserver());
 	}
 
@@ -39,16 +27,16 @@ public class DetalheRemessa extends Detalhe {
 		return TipoRegistro.DETALHE_REMESSA;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
-	public TituloCobranca processaRegistroArquivo() {
-
-		String registro = getRegistroDoArquivo();
-
-		TituloCobrancaBuilder builder = getBuilderRegistro().comNumero(registro.substring(2, 12).trim())
-				.doSacado(new SacadoBuilder().comNomeRazaoSocial(registro.substring(12, 104).trim())
-						.comCpfCnpj(registro.substring(104, 118)).constroi())
-				.comVencimento(toDate(registro.substring(118, 126)))
-				.comValor(toBigDecimal(registro.substring(126, 136)));
+	public TituloCobranca processaRegistroArquivo(String registroDoArquivo, Registro registroVinculado) {
+		setRegistroVinculado(registroVinculado);
+		
+		TituloCobrancaBuilder builder = getBuilderRegistro().comNumero(registroDoArquivo.substring(2, 12).trim())
+				.doSacado(new SacadoBuilder().comNomeRazaoSocial(registroDoArquivo.substring(12, 104).trim())
+						.comCpfCnpj(registroDoArquivo.substring(104, 118)).constroi())
+				.comVencimento(toDate(registroDoArquivo.substring(118, 126)))
+				.comValor(toBigDecimal(registroDoArquivo.substring(126, 136)));
 
 		return processaRegistroVinculado(builder.constroi());
 	}

@@ -7,6 +7,7 @@ import com.github.flaviodev.refactoring.builder.RemessaBuilder;
 import com.github.flaviodev.refactoring.model.Cedente;
 import com.github.flaviodev.refactoring.model.Remessa;
 import com.github.flaviodev.refactoring.model.registros.base.Cabecalho;
+import com.github.flaviodev.refactoring.model.registros.base.Registro;
 import com.github.flaviodev.refactoring.observer.PersisteRemessaObserver;
 import com.github.flaviodev.refactoring.tipo.Banco;
 import com.github.flaviodev.refactoring.tipo.TipoRegistro;
@@ -19,31 +20,27 @@ public class CabecalhoRemessa extends Cabecalho {
 		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteRemessaObserver());
 	}
 	
-	public CabecalhoRemessa(String registroDoArquivo) {
-		super(registroDoArquivo);
-		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteRemessaObserver());
-	}
 
 	@Override
 	public TipoRegistro getTipo() {
 		return TipoRegistro.CABECALHO_REMESSA;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
-	public Remessa processaRegistroArquivo() {
-
-		String registro = getRegistroDoArquivo();
-
+	public Remessa processaRegistroArquivo(String registroDoArquivo, Registro registroVinculado) {
+		setRegistroVinculado(registroVinculado);
+		
 		RemessaBuilder builder = getBuilderRegistro();
 
 		ConvenioBuilder convenioBuilder = new ConvenioBuilder();
-		convenioBuilder.comNumero(registro.substring(10, 20)).naAgencia(registro.substring(148, 153).trim())
-				.noBanco(Banco.getPeloNumero(registro.substring(125, 128)))
-				.paraCedente(new Cedente(registro.substring(20, 111).trim(), registro.substring(111, 125).trim()))
-				.paraConta(registro.substring(153, 163).trim());
+		convenioBuilder.comNumero(registroDoArquivo.substring(10, 20)).naAgencia(registroDoArquivo.substring(148, 153).trim())
+				.noBanco(Banco.getPeloNumero(registroDoArquivo.substring(125, 128)))
+				.paraCedente(new Cedente(registroDoArquivo.substring(20, 111).trim(), registroDoArquivo.substring(111, 125).trim()))
+				.paraConta(registroDoArquivo.substring(153, 163).trim());
 
-		builder.comSequencia(Long.parseLong(registro.substring(2, 10))).doConvenio(convenioBuilder.constroi())
-				.naData(toDate(registro.substring(163, 171)));
+		builder.comSequencia(Long.parseLong(registroDoArquivo.substring(2, 10))).doConvenio(convenioBuilder.constroi())
+				.naData(toDate(registroDoArquivo.substring(163, 171)));
 
 		Remessa remessa = processaRegistroVinculado(builder.constroi());
 		setRemessa(remessa);

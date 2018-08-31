@@ -13,7 +13,6 @@ import com.github.flaviodev.refactoring.util.DateUtil;
 @SuppressWarnings("rawtypes")
 public abstract class Registro<I extends Serializable, E extends EntidadeBase<I>, B extends RegistroBuilder<I, E>> {
 
-	private String registroDoArquivo;
 	private B builderRegistro;
 	private Long sequenciaNoArquivo;
 
@@ -23,17 +22,8 @@ public abstract class Registro<I extends Serializable, E extends EntidadeBase<I>
 
 	}
 
-	public Registro(String registroDoArquivo) {
-		this.registroDoArquivo = registroDoArquivo;
-	}
-
-	public Registro(String registroDoArquivo, Registro registroVinculado) {
-		this.registroDoArquivo = registroDoArquivo;
+	public Registro(Registro registroVinculado) {
 		this.registroVinculado = registroVinculado;
-	}
-
-	public String getRegistroDoArquivo() {
-		return registroDoArquivo;
 	}
 
 	public Registro getRegistroVinculado() {
@@ -42,10 +32,6 @@ public abstract class Registro<I extends Serializable, E extends EntidadeBase<I>
 
 	public void setRegistroVinculado(Registro registroVinculado) {
 		this.registroVinculado = registroVinculado;
-	}
-
-	public void setRegistroDoArquivo(String registroDoArquivo) {
-		this.registroDoArquivo = registroDoArquivo;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -76,7 +62,7 @@ public abstract class Registro<I extends Serializable, E extends EntidadeBase<I>
 		this.sequenciaNoArquivo = sequenciaNoArquivo;
 	}
 
-	public abstract E processaRegistroArquivo();
+	public abstract E processaRegistroArquivo(String registroDoArquivo, Registro registroVinculado);
 
 	@SuppressWarnings("unchecked")
 	public E processaRegistroVinculado(E entidade) {
