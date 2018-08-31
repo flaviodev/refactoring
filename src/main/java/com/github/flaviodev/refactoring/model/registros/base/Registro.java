@@ -19,6 +19,10 @@ public abstract class Registro<I extends Serializable, E extends EntidadeBase<I>
 
 	private Registro registroVinculado;
 
+	public Registro() {
+
+	}
+
 	public Registro(String registroDoArquivo) {
 		this.registroDoArquivo = registroDoArquivo;
 	}
@@ -32,13 +36,25 @@ public abstract class Registro<I extends Serializable, E extends EntidadeBase<I>
 		return registroDoArquivo;
 	}
 
+	public Registro getRegistroVinculado() {
+		return registroVinculado;
+	}
+
+	public void setRegistroVinculado(Registro registroVinculado) {
+		this.registroVinculado = registroVinculado;
+	}
+
+	public void setRegistroDoArquivo(String registroDoArquivo) {
+		this.registroDoArquivo = registroDoArquivo;
+	}
+
 	@SuppressWarnings("unchecked")
 	public B getBuilderRegistro() {
 
 		if (builderRegistro == null) {
 
 			try {
-				Class<B> clazzBuilder = (Class<B>) ((ParameterizedType) getClass().getSuperclass()
+				Class<B> clazzBuilder = (Class<B>) ((ParameterizedType) getClass().getSuperclass().getSuperclass()
 						.getGenericSuperclass()).getActualTypeArguments()[2];
 
 				builderRegistro = clazzBuilder.newInstance();

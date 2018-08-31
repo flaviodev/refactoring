@@ -15,9 +15,10 @@ public class ProcessadorRemessaTest {
 	@SuppressWarnings("unchecked")
 	@Test
 	public void deveProcessarRemessa() {
-		ProcessadorRemessa processador = ProcessadorRemessa.get();
+		ProcessadorRemessa processador = new ProcessadorRemessa(
+				getClass().getClassLoader().getResourceAsStream("CB01012018.REM"));
 
-		processador.processaRemessa(getClass().getClassLoader().getResourceAsStream("CB01012018.REM"));
+		processador.processaRemessa();
 
 		logger.info("\n\n--------------------------------------------------------------------------\n\n");
 

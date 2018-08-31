@@ -15,6 +15,10 @@ public class CabecalhoRemessa extends Cabecalho {
 
 	private Logger logger = Logger.getLogger(CabecalhoRemessa.class);
 
+	public CabecalhoRemessa() {
+		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteRemessaObserver());
+	}
+	
 	public CabecalhoRemessa(String registroDoArquivo) {
 		super(registroDoArquivo);
 		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteRemessaObserver());

@@ -38,7 +38,7 @@ public class TituloCobrancaBuilder extends RegistroBuilder<String, TituloCobranc
 
 	public TituloCobrancaBuilder doSacado(Sacado sacado) {
 
-		if (this.sacado == null)
+		if (this.sacado == null && sacado != null)
 			this.sacado = sacado;
 		else
 			atualizaSacado(sacado);
@@ -146,7 +146,10 @@ public class TituloCobrancaBuilder extends RegistroBuilder<String, TituloCobranc
 		titulo.setValorMultaAtraso(valorMultaAtraso);
 		titulo.setValorRecebido(valorRecebido);
 
-		getAcoesAoConstruir().forEach(acao -> titulo = acao.executa(titulo));
+		getAcoesAoConstruir().forEach(acao -> {
+			titulo = acao.executa(titulo);
+			sacado = titulo.getSacado();
+		});
 
 		return titulo;
 	}

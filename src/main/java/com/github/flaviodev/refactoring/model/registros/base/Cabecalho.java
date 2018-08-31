@@ -5,6 +5,9 @@ import com.github.flaviodev.refactoring.model.Remessa;
 
 public abstract class Cabecalho extends Registro<String, Remessa, RemessaBuilder> {
 
+	public Cabecalho() {
+	}
+	
 	public Cabecalho(String registroDoArquivo) {
 		super(registroDoArquivo);
 	}

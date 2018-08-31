@@ -5,6 +5,9 @@ import com.github.flaviodev.refactoring.model.TituloCobranca;
 
 public abstract class Detalhe extends Registro<String, TituloCobranca, TituloCobrancaBuilder> {
 
+	public Detalhe() {
+	}
+	
 	public Detalhe(String registroDoArquivo) {
 		super(registroDoArquivo);
 	}

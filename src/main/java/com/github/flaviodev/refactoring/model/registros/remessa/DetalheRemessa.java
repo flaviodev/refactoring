@@ -5,10 +5,15 @@ import com.github.flaviodev.refactoring.builder.TituloCobrancaBuilder;
 import com.github.flaviodev.refactoring.model.Remessa;
 import com.github.flaviodev.refactoring.model.TituloCobranca;
 import com.github.flaviodev.refactoring.model.registros.base.Detalhe;
+import com.github.flaviodev.refactoring.model.registros.base.Registro;
 import com.github.flaviodev.refactoring.observer.PersisteTituloObserver;
 import com.github.flaviodev.refactoring.tipo.TipoRegistro;
 
 public class DetalheRemessa extends Detalhe {
+
+	public DetalheRemessa() {
+		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteTituloObserver());
+	}
 
 	public DetalheRemessa(String registroDoArquivo, Remessa remessa) {
 		super(registroDoArquivo);
@@ -19,6 +24,19 @@ public class DetalheRemessa extends Detalhe {
 	public DetalheRemessa(String registroDoArquivo, DetalheRemessa registroVinculado) {
 		super(registroDoArquivo, registroVinculado);
 		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteTituloObserver());
+	}
+
+	public void setRemessa(Remessa remessa) {
+		getBuilderRegistro().naRemessa(remessa);
+	}
+
+	@SuppressWarnings("rawtypes")
+	@Override
+	public void setRegistroVinculado(Registro registroVinculado) {
+		if (registroVinculado instanceof CabecalhoRemessa)
+			getBuilderRegistro().naRemessa(((CabecalhoRemessa) registroVinculado).getRemessa());
+
+//		super.setRegistroVinculado(registroVinculado);
 	}
 
 	@Override

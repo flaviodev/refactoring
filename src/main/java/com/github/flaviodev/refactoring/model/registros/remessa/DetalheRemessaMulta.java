@@ -7,6 +7,9 @@ import com.github.flaviodev.refactoring.tipo.TipoRegistro;
 
 public class DetalheRemessaMulta extends Detalhe {
 
+	public DetalheRemessaMulta() {
+	}
+	
 	public DetalheRemessaMulta(String registroDoArquivo, DetalheRemessa registroVinculado) {
 		super(registroDoArquivo, registroVinculado);
 	}

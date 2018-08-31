@@ -13,6 +13,10 @@ public class DetalheRemessaEmail extends Detalhe {
 
 	private Logger logger = Logger.getLogger(DetalheRemessaEmail.class);
 
+	public DetalheRemessaEmail() {
+		getBuilderRegistro().adicionaAcaoAoConstruir(new EnviaBoletoParaClienteObserver());
+	}
+	
 	public DetalheRemessaEmail(String registroDoArquivo, DetalheRemessa registroVinculado) {
 		super(registroDoArquivo, registroVinculado);
 		getBuilderRegistro().adicionaAcaoAoConstruir(new EnviaBoletoParaClienteObserver());
