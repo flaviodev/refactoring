@@ -2,7 +2,7 @@ package com.github.flaviodev.dp.builder;
 
 import com.github.flaviodev.dp.model.Sacado;
 
-public class SacadoBuilder implements Builder<String, Sacado> {
+public class SacadoBuilder implements EntidadeBuilder<String, Sacado> {
 
 	private String nomeRazaoSocial;
 	private String cpfCnpj;

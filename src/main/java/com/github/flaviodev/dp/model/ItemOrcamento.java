@@ -10,10 +10,10 @@ import javax.persistence.Transient;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import com.github.flaviodev.dp.model.base.BaseEntity;
+import com.github.flaviodev.dp.model.base.EntidadeBase;
 
 @Entity
-public class ItemOrcamento extends BaseEntity<String> {
+public class ItemOrcamento extends EntidadeBase<String> {
 
 	private static final long serialVersionUID = 5174263295854186259L;
 

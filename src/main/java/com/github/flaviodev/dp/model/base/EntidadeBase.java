@@ -7,7 +7,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Version;
 
 @MappedSuperclass
-public abstract class BaseEntity<I extends Serializable> implements Serializable {
+public abstract class EntidadeBase<I extends Serializable> implements Serializable {
 
 	private static final long serialVersionUID = 7373447920782854276L;
 
@@ -30,7 +30,7 @@ public abstract class BaseEntity<I extends Serializable> implements Serializable
 	}
 
 	@SuppressWarnings("unchecked")
-	public <E extends BaseEntity<I>> E persiste() {
+	public <E extends EntidadeBase<I>> E persiste() {
 
 		if (!isTransient())
 			throw new IllegalStateException("Entidade já persistida");
@@ -45,7 +45,7 @@ public abstract class BaseEntity<I extends Serializable> implements Serializable
 	}
 
 	@SuppressWarnings("unchecked")
-	public <E extends BaseEntity<I>> E altera() {
+	public <E extends EntidadeBase<I>> E altera() {
 
 		E entidadeAlterada = null;
 
@@ -96,7 +96,7 @@ public abstract class BaseEntity<I extends Serializable> implements Serializable
 			return false;
 
 		@SuppressWarnings("rawtypes")
-		BaseEntity other = (BaseEntity) obj;
+		EntidadeBase other = (EntidadeBase) obj;
 		if (getId() == null) {
 
 			if (other.getId() != null)

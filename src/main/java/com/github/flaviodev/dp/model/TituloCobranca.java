@@ -17,11 +17,11 @@ import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import com.github.flaviodev.dp.model.base.BaseEntity;
+import com.github.flaviodev.dp.model.base.EntidadeBase;
 import com.github.flaviodev.dp.tipo.EstadoTitulo;
 
 @Entity
-public class TituloCobranca extends BaseEntity<String> {
+public class TituloCobranca extends EntidadeBase<String> {
 
 	private static final long serialVersionUID = 987684112407950607L;
 

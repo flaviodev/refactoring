@@ -8,7 +8,7 @@ import com.github.flaviodev.dp.model.Sacado;
 import com.github.flaviodev.dp.model.TituloCobranca;
 import com.github.flaviodev.dp.tipo.EstadoTitulo;
 
-public class TituloCobrancaBuilder implements BuilderRegistro<String, TituloCobranca> {
+public class TituloCobrancaBuilder implements RegistroBuilder<String, TituloCobranca> {
 	private String numero;
 	private Remessa remessa;
 	private Sacado sacado;

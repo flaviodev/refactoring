@@ -17,10 +17,10 @@ import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import com.github.flaviodev.dp.model.base.BaseEntity;
+import com.github.flaviodev.dp.model.base.EntidadeBase;
 
 @Entity
-public class Remessa extends BaseEntity<String> {
+public class Remessa extends EntidadeBase<String> {
 
 	private static final long serialVersionUID = 6548684112407950607L;
 

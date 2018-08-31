@@ -8,7 +8,7 @@ import com.github.flaviodev.dp.model.Convenio;
 import com.github.flaviodev.dp.model.Remessa;
 import com.github.flaviodev.dp.model.TituloCobranca;
 
-public class RemessaBuilder implements BuilderRegistro<String, Remessa> {
+public class RemessaBuilder implements RegistroBuilder<String, Remessa> {
 
 	private Long sequencia;
 	private Convenio convenio;

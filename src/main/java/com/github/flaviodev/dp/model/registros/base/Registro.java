@@ -5,13 +5,13 @@ import java.lang.reflect.ParameterizedType;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import com.github.flaviodev.dp.builder.BuilderRegistro;
-import com.github.flaviodev.dp.model.base.BaseEntity;
+import com.github.flaviodev.dp.builder.RegistroBuilder;
+import com.github.flaviodev.dp.model.base.EntidadeBase;
 import com.github.flaviodev.dp.tipo.TipoRegistro;
 import com.github.flaviodev.dp.util.DateUtil;
 
 @SuppressWarnings("rawtypes")
-public abstract class Registro<I extends Serializable, E extends BaseEntity<I>, B extends BuilderRegistro<I, E>> {
+public abstract class Registro<I extends Serializable, E extends EntidadeBase<I>, B extends RegistroBuilder<I, E>> {
 
 	private String registroDoArquivo;
 	private B builderRegistro;

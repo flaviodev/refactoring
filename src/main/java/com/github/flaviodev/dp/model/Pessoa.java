@@ -9,10 +9,10 @@ import javax.persistence.MappedSuperclass;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import com.github.flaviodev.dp.model.base.BaseEntity;
+import com.github.flaviodev.dp.model.base.EntidadeBase;
 
 @MappedSuperclass
-public abstract class Pessoa extends BaseEntity<String> {
+public abstract class Pessoa extends EntidadeBase<String> {
 
 	private static final long serialVersionUID = 6548447923572856584L;
 

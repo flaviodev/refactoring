@@ -14,10 +14,10 @@ import javax.persistence.Transient;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import com.github.flaviodev.dp.model.base.BaseEntity;
+import com.github.flaviodev.dp.model.base.EntidadeBase;
 
 @Entity
-public class Orcamento extends BaseEntity<String> {
+public class Orcamento extends EntidadeBase<String> {
 
 	private static final long serialVersionUID = -2487684112407950607L;
 

@@ -12,11 +12,11 @@ import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import com.github.flaviodev.dp.model.base.BaseEntity;
+import com.github.flaviodev.dp.model.base.EntidadeBase;
 import com.github.flaviodev.dp.tipo.Banco;
 
 @Entity
-public class Convenio extends BaseEntity<String> {
+public class Convenio extends EntidadeBase<String> {
 
 	private static final long serialVersionUID = 1598684112407950607L;
 
