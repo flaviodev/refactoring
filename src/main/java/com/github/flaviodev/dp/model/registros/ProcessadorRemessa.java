@@ -19,11 +19,11 @@ import com.github.flaviodev.dp.model.registros.remessa.DetalheRemessaEmail;
 import com.github.flaviodev.dp.model.registros.remessa.DetalheRemessaMulta;
 import com.github.flaviodev.dp.tipo.TipoRegistro;
 
+@SuppressWarnings("rawtypes")
 public class ProcessadorRemessa {
 
 	private Logger logger = Logger.getLogger(ProcessadorRemessa.class);
 
-	@SuppressWarnings("rawtypes")
 	EnumMap<TipoRegistro, Registro> utltimoRegistroPorTipo = new EnumMap<>(TipoRegistro.class);
 
 	private ProcessadorRemessa() {
@@ -49,7 +49,6 @@ public class ProcessadorRemessa {
 		return processaRemessa(new InputStreamReader(inputStreamRemessa));
 	}
 
-	@SuppressWarnings("rawtypes")
 	public Cabecalho processaRemessa(InputStreamReader inputStreamReaderRemessa) {
 
 		try (BufferedReader br = new BufferedReader(inputStreamReaderRemessa)) {
@@ -73,7 +72,9 @@ public class ProcessadorRemessa {
 					break;
 
 				case DETALHE_REMESSA:
-					DetalheRemessa detalheRemessa = new DetalheRemessa(linha);
+					DetalheRemessa detalheRemessa = new DetalheRemessa(linha,
+							((CabecalhoRemessa) utltimoRegistroPorTipo.get(TipoRegistro.CABECALHO_REMESSA))
+									.getRemessa());
 					detalheRemessa.processaRegistroArquivo();
 					registro = detalheRemessa;
 					break;
@@ -117,4 +118,5 @@ public class ProcessadorRemessa {
 
 		return TipoRegistro.getPeloCodigo(linhaRegistro.substring(0, 2));
 	}
+
 }

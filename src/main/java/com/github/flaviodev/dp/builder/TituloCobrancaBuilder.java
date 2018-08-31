@@ -8,7 +8,7 @@ import com.github.flaviodev.dp.model.Sacado;
 import com.github.flaviodev.dp.model.TituloCobranca;
 import com.github.flaviodev.dp.tipo.EstadoTitulo;
 
-public class TituloCobrancaBuilder implements BuilderRegistro<String,TituloCobranca> {
+public class TituloCobrancaBuilder implements BuilderRegistro<String, TituloCobranca> {
 	private String numero;
 	private Remessa remessa;
 	private Sacado sacado;
@@ -18,103 +18,114 @@ public class TituloCobrancaBuilder implements BuilderRegistro<String,TituloCobra
 	private BigDecimal percentualJurosDia;
 	private Date dataLiquidacao;
 	private BigDecimal valorRecebido;
-	private EstadoTitulo estado;
+	private EstadoTitulo estado = EstadoTitulo.AGUARDANDO;
 
 	public TituloCobrancaBuilder comNumero(String numero) {
-		this.numero = numero;
+		if (numero != null)
+			this.numero = numero;
+
 		return this;
 	}
 
 	public TituloCobrancaBuilder naRemessa(Remessa remessa) {
-		this.remessa = remessa;
+		if (remessa != null)
+			this.remessa = remessa;
+
 		return this;
 	}
 
 	public TituloCobrancaBuilder doSacado(Sacado sacado) {
-		this.sacado = sacado;
+
+		if (this.sacado == null)
+			this.sacado = sacado;
+		else
+			atualizaSacado(sacado);
+
 		return this;
 	}
-	
+
+	private void atualizaSacado(Sacado sacado) {
+		if (sacado == null)
+			return;
+
+		if (sacado.getNomeRazaoSocial() != null)
+			this.sacado.setNomeRazaoSocial(sacado.getNomeRazaoSocial());
+
+		if (sacado.getCpfCnpj() != null)
+			this.sacado.setCpfCnpj(sacado.getCpfCnpj());
+
+		if (sacado.getEmail() != null)
+			this.sacado.setEmail(sacado.getEmail());
+	}
+
 	public TituloCobrancaBuilder comVencimento(Date dataVencimento) {
-		this.dataVencimento = dataVencimento;
+		if (dataVencimento != null)
+			this.dataVencimento = dataVencimento;
+
 		return this;
 	}
 
 	public TituloCobrancaBuilder comValor(BigDecimal valor) {
-		this.valor = valor;
+		if (valor != null)
+			this.valor = valor;
+
 		return this;
 	}
 
 	public TituloCobrancaBuilder comMulta(BigDecimal valorMultaAtraso) {
-		this.valorMultaAtraso = valorMultaAtraso;
+		if (valorMultaAtraso != null)
+			this.valorMultaAtraso = valorMultaAtraso;
+
 		return this;
 	}
 
 	public TituloCobrancaBuilder comJurosDia(BigDecimal percentualJurosDia) {
-		this.percentualJurosDia = percentualJurosDia;
+		if (percentualJurosDia != null)
+			this.percentualJurosDia = percentualJurosDia;
+
 		return this;
 	}
 
 	public TituloCobrancaBuilder liquidadoEm(Date dataLiquidacao) {
-		this.dataLiquidacao = dataLiquidacao;
+		if (dataLiquidacao != null)
+			this.dataLiquidacao = dataLiquidacao;
+
 		return this;
 	}
 
 	public TituloCobrancaBuilder comValorRecebido(BigDecimal valorRecebido) {
-		this.valorRecebido = valorRecebido;
+		if (valorRecebido != null)
+			this.valorRecebido = valorRecebido;
+
 		return this;
 	}
 
 	public TituloCobrancaBuilder noEstado(EstadoTitulo estado) {
-		this.estado = estado;
+		if (estado != null)
+			this.estado = estado;
+
 		return this;
 	}
-	
+
 	@Override
-	public TituloCobrancaBuilder populaRegistro(TituloCobranca titulo) {
-		
-		if(titulo == null)
+	public TituloCobrancaBuilder comDadosDeOutraEntidade(TituloCobranca titulo) {
+
+		if (titulo == null)
 			return this;
-		
-		if(titulo.getDataLiquidacao()!=null)
-			dataLiquidacao = titulo.getDataLiquidacao();
-		
-		if(titulo.getDataVencimento()!=null)
-			dataVencimento = titulo.getDataVencimento();
-			
-		if(titulo.getEstado()!=null)
-			estado = titulo.getEstado();
-		
-		if(titulo.getNumero()!=null)
-			numero = titulo.getNumero();
-		
-		if(titulo.getPercentualJurosDia()!=null)
-			percentualJurosDia = titulo.getPercentualJurosDia();
-		
-		if(sacado == null) 
-			sacado = new Sacado();
 
-		if(titulo.getSacado()!=null && titulo.getSacado().getNomeRazaoSocial()!=null) 
-			sacado.setNomeRazaoSocial(titulo.getSacado().getNomeRazaoSocial());
+		naRemessa(titulo.getRemessa());
+		liquidadoEm(titulo.getDataLiquidacao());
+		comVencimento(titulo.getDataVencimento());
+		noEstado( titulo.getEstado());
+		comNumero(titulo.getNumero());
+		comJurosDia(titulo.getPercentualJurosDia());
+		doSacado(titulo.getSacado());
+		comValor(titulo.getValor());
+		comMulta(titulo.getValorMultaAtraso());
+		comValorRecebido(titulo.getValorRecebido());
 
-		if(titulo.getSacado()!=null && titulo.getSacado().getCpfCnpj()!=null) 
-			sacado.setCpfCnpj(titulo.getSacado().getCpfCnpj());
-		
-		if(titulo.getSacado()!=null && titulo.getSacado().getEmail()!=null) 
-			sacado.setEmail(titulo.getSacado().getEmail());
-		
-		if(titulo.getValor()!=null)
-			valor = titulo.getValor();
-		
-		if(titulo.getValorMultaAtraso()!=null)
-			valorMultaAtraso = titulo.getValorMultaAtraso();
-		
-		if(titulo.getValorRecebido()!=null)
-			valorMultaAtraso = titulo.getValorRecebido();
-		
 		return this;
 	}
-
 
 	@Override
 	public TituloCobranca constroi() {

@@ -6,6 +6,7 @@ import com.github.flaviodev.dp.builder.SacadoBuilder;
 import com.github.flaviodev.dp.builder.TituloCobrancaBuilder;
 import com.github.flaviodev.dp.model.TituloCobranca;
 import com.github.flaviodev.dp.model.registros.base.Detalhe;
+import com.github.flaviodev.dp.tipo.TipoRegistro;
 
 public class DetalheRemessaEmail extends Detalhe {
 
@@ -16,18 +17,21 @@ public class DetalheRemessaEmail extends Detalhe {
 	}
 
 	@Override
+	public TipoRegistro getTipo() {
+		return TipoRegistro.DETALHE_REMESSA_EMAIL_SACADO;
+	}
+
+	@Override
 	public TituloCobranca processaRegistroArquivo() {
 		String registro = getRegistroDoArquivo();
-		
-		TituloCobrancaBuilder builder = getBuilderRegistro().populaRegistro(processaDetalheVinculado());
 
-		builder.doSacado(new SacadoBuilder().comEmail(registro.substring(2, 152).trim()).constroi());
+		TituloCobrancaBuilder builder = getBuilderRegistro()
+				.doSacado(new SacadoBuilder().comEmail(registro.substring(2, 152).trim()).constroi());
 
-		TituloCobranca titulo = builder.constroi();
+		TituloCobranca titulo = processaRegistroVinculado(builder.constroi());
 
 		logger.info(titulo);
 
 		return titulo;
 	}
-
 }

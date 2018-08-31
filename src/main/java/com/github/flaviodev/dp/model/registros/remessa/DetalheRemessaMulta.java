@@ -1,28 +1,29 @@
 package com.github.flaviodev.dp.model.registros.remessa;
 
-import org.apache.log4j.Logger;
-
 import com.github.flaviodev.dp.builder.TituloCobrancaBuilder;
 import com.github.flaviodev.dp.model.TituloCobranca;
 import com.github.flaviodev.dp.model.registros.base.Detalhe;
+import com.github.flaviodev.dp.tipo.TipoRegistro;
 
 public class DetalheRemessaMulta extends Detalhe {
-
-	private Logger logger = Logger.getLogger(DetalheRemessaMulta.class);
 
 	public DetalheRemessaMulta(String registroDoArquivo, DetalheRemessa registroVinculado) {
 		super(registroDoArquivo, registroVinculado);
 	}
 
 	@Override
+	public TipoRegistro getTipo() {
+		return TipoRegistro.DETALHE_REMESSA_DADOS_MULTA;
+	}
+
+	@Override
 	public TituloCobranca processaRegistroArquivo() {
-		TituloCobrancaBuilder builder = getBuilderRegistro().populaRegistro(processaDetalheVinculado());
+		String registro = getRegistroDoArquivo();
 
-		TituloCobranca titulo = builder.constroi();
+		TituloCobrancaBuilder builder = getBuilderRegistro().comMulta(toBigDecimal(registro.substring(2, 12)))
+				.comJurosDia(toBigDecimal(registro.substring(12, 22)));
 
-		logger.info(titulo);
-
-		return titulo;
+		return processaRegistroVinculado(builder.constroi());
 	}
 
 }

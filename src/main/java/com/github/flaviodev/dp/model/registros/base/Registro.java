@@ -2,24 +2,28 @@ package com.github.flaviodev.dp.model.registros.base;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
+import java.math.BigDecimal;
+import java.util.Date;
 
 import com.github.flaviodev.dp.builder.BuilderRegistro;
 import com.github.flaviodev.dp.model.base.BaseEntity;
 import com.github.flaviodev.dp.tipo.TipoRegistro;
+import com.github.flaviodev.dp.util.DateUtil;
 
+@SuppressWarnings("rawtypes")
 public abstract class Registro<I extends Serializable, E extends BaseEntity<I>, B extends BuilderRegistro<I, E>> {
 
 	private String registroDoArquivo;
-	private TipoRegistro tipo;
+	private B builderRegistro;
 	private Long sequenciaNoArquivo;
 
-	private Registro<I, E, B> registroVinculado;
+	private Registro registroVinculado;
 
 	public Registro(String registroDoArquivo) {
 		this.registroDoArquivo = registroDoArquivo;
 	}
 
-	public Registro(String registroDoArquivo, Registro<I, E, B> registroVinculado) {
+	public Registro(String registroDoArquivo, Registro registroVinculado) {
 		this.registroDoArquivo = registroDoArquivo;
 		this.registroVinculado = registroVinculado;
 	}
@@ -30,24 +34,23 @@ public abstract class Registro<I extends Serializable, E extends BaseEntity<I>, 
 
 	@SuppressWarnings("unchecked")
 	public B getBuilderRegistro() {
-		Class<B> clazzBuilder = (Class<B>) ((ParameterizedType) getClass().getSuperclass().getGenericSuperclass())
-				.getActualTypeArguments()[2];
 
-		try {
-			return clazzBuilder.newInstance();
-		} catch (InstantiationException | IllegalAccessException e) {
-			return null;
+		if (builderRegistro == null) {
+
+			try {
+				Class<B> clazzBuilder = (Class<B>) ((ParameterizedType) getClass().getSuperclass()
+						.getGenericSuperclass()).getActualTypeArguments()[2];
+
+				builderRegistro = clazzBuilder.newInstance();
+			} catch (InstantiationException | IllegalAccessException e) {
+
+			}
 		}
 
+		return builderRegistro;
 	}
 
-	public TipoRegistro getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(TipoRegistro tipo) {
-		this.tipo = tipo;
-	}
+	public abstract TipoRegistro getTipo();
 
 	public Long getSequenciaNoArquivo() {
 		return sequenciaNoArquivo;
@@ -59,11 +62,20 @@ public abstract class Registro<I extends Serializable, E extends BaseEntity<I>, 
 
 	public abstract E processaRegistroArquivo();
 
-	public E processaDetalheVinculado() {
+	@SuppressWarnings("unchecked")
+	public E processaRegistroVinculado(E entidade) {
 
 		if (registroVinculado == null)
-			return null;
+			return entidade;
 
-		return registroVinculado.processaRegistroArquivo();
+		return (E) registroVinculado.getBuilderRegistro().comDadosDeOutraEntidade(entidade).constroi();
+	}
+
+	public Date toDate(String data) {
+		return DateUtil.toDate(data, "ddMMyyyy");
+	}
+
+	public BigDecimal toBigDecimal(String valor) {
+		return new BigDecimal(valor).divide(new BigDecimal(100));
 	}
 }

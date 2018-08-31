@@ -6,7 +6,6 @@ import java.util.List;
 
 import com.github.flaviodev.dp.model.Convenio;
 import com.github.flaviodev.dp.model.Remessa;
-import com.github.flaviodev.dp.model.Sacado;
 import com.github.flaviodev.dp.model.TituloCobranca;
 
 public class RemessaBuilder implements BuilderRegistro<String, Remessa> {
@@ -21,47 +20,42 @@ public class RemessaBuilder implements BuilderRegistro<String, Remessa> {
 	}
 
 	public RemessaBuilder comSequencia(Long sequencia) {
-		this.sequencia = sequencia;
+		if (sequencia != null)
+			this.sequencia = sequencia;
+
 		return this;
 	}
 
 	public RemessaBuilder doConvenio(Convenio convenio) {
-		this.convenio = convenio;
+		if (convenio != null)
+			this.convenio = convenio;
+
 		return this;
 	}
 
 	public RemessaBuilder naData(Date data) {
-		this.data = data;
+		if (data != null)
+			this.data = data;
+
 		return this;
 	}
 
 	public RemessaBuilder adicionaTitulo(TituloCobranca titulo) {
 		this.titulos.add(titulo);
+
 		return this;
 	}
-
+	
 	@Override
-	public RemessaBuilder populaRegistro(Remessa remessa) {
-		
-		if(remessa == null)
+	public RemessaBuilder comDadosDeOutraEntidade(Remessa remessa) {
+
+		if (remessa == null)
 			return this;
 
-		if (remessa.getSequencia() != null)
-			comSequencia(remessa.getSequencia());
+		comSequencia(remessa.getSequencia());
+		doConvenio(remessa.getConvenio());
+		naData(remessa.getData());
 
-		if(convenio == null) 
-			convenio = new Convenio();
-
-	
-		// FIXME implementar para convenio
-
-	
-
-		
-		
-		if (remessa.getData() != null)
-			naData(remessa.getData());
-		
 		return this;
 	}
 

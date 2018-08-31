@@ -8,7 +8,7 @@ import com.github.flaviodev.dp.model.Cedente;
 import com.github.flaviodev.dp.model.Remessa;
 import com.github.flaviodev.dp.model.registros.base.Cabecalho;
 import com.github.flaviodev.dp.tipo.Banco;
-import com.github.flaviodev.dp.util.DateUtil;
+import com.github.flaviodev.dp.tipo.TipoRegistro;
 
 public class CabecalhoRemessa extends Cabecalho {
 
@@ -19,11 +19,16 @@ public class CabecalhoRemessa extends Cabecalho {
 	}
 
 	@Override
+	public TipoRegistro getTipo() {
+		return TipoRegistro.CABECALHO_REMESSA;
+	}
+
+	@Override
 	public Remessa processaRegistroArquivo() {
 
 		String registro = getRegistroDoArquivo();
 
-		RemessaBuilder builder = getBuilderRegistro().populaRegistro(processaDetalheVinculado());
+		RemessaBuilder builder = getBuilderRegistro();
 
 		ConvenioBuilder convenioBuilder = new ConvenioBuilder();
 		convenioBuilder.comNumero(registro.substring(10, 20)).naAgencia(registro.substring(148, 153).trim())
@@ -32,10 +37,11 @@ public class CabecalhoRemessa extends Cabecalho {
 				.paraConta(registro.substring(153, 163).trim());
 
 		builder.comSequencia(Long.parseLong(registro.substring(2, 10))).doConvenio(convenioBuilder.constroi())
-				.naData(DateUtil.toDate(registro.substring(163, 171), "ddMMyyyy"));
+				.naData(toDate(registro.substring(163, 171)));
 
-		Remessa remessa = builder.constroi();
-
+		Remessa remessa = processaRegistroVinculado(builder.constroi());
+		setRemessa(remessa);
+		
 		logger.info(remessa);
 
 		return remessa;
