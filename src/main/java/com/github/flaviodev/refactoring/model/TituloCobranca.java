@@ -41,7 +41,7 @@ public class TituloCobranca extends EntidadeBase<String> {
 	private Sacado sacado;
 
 	@Temporal(TemporalType.DATE)
-	@Basic(fetch = FetchType.LAZY, optional = false)
+	@Basic(optional = false)
 	private Date dataVencimento;
 
 	private BigDecimal valor;
@@ -51,7 +51,6 @@ public class TituloCobranca extends EntidadeBase<String> {
 	private BigDecimal percentualJurosDia;
 
 	@Temporal(TemporalType.DATE)
-	@Basic(fetch = FetchType.LAZY, optional = false)
 	private Date dataLiquidacao;
 
 	private BigDecimal valorRecebido;
@@ -163,6 +162,5 @@ public class TituloCobranca extends EntidadeBase<String> {
 				id, numero, remessa, sacado, dataVencimento, valor, valorMultaAtraso, percentualJurosDia,
 				dataLiquidacao, valorRecebido, estado);
 	}
-	
-	
+
 }

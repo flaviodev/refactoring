@@ -5,6 +5,7 @@ import com.github.flaviodev.refactoring.builder.TituloCobrancaBuilder;
 import com.github.flaviodev.refactoring.model.Remessa;
 import com.github.flaviodev.refactoring.model.TituloCobranca;
 import com.github.flaviodev.refactoring.model.registros.base.Detalhe;
+import com.github.flaviodev.refactoring.observer.PersisteTituloObserver;
 import com.github.flaviodev.refactoring.tipo.TipoRegistro;
 
 public class DetalheRemessa extends Detalhe {
@@ -18,6 +19,11 @@ public class DetalheRemessa extends Detalhe {
 		super(registroDoArquivo, registroVinculado);
 	}
 
+	@Override
+	public TituloCobrancaBuilder getBuilderRegistro() {
+		return (TituloCobrancaBuilder) super.getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteTituloObserver());
+	}
+	
 	@Override
 	public TipoRegistro getTipo() {
 		return TipoRegistro.DETALHE_REMESSA;

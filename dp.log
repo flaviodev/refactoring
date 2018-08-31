@@ -696,3 +696,956 @@
 2018-08-30 22:17:42 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0006
 2018-08-30 22:17:42 INFO  DetalheRemessaEmail:33 - TituloCobranca [id=null, numero=123457, remessa=Remessa [id=e0132b7ceb6a456bace4a164ebad75f8, sequencia=1, convenio=Convenio [id=147671124ff84d71ad4e13673a33d741, numero=0000000001, cedente=Cedente [id=15d0e1d25c9f4e899d2a081232bf590c, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018], sacado=Sacado [id=null, nomeRazaoSocial=CLIENTE2 LTDA, cpfCnpj=11888555000122, email=cliente2@email.com], dataVencimento=Mon Jan 01 00:00:00 BRST 2018, valor=100, valorMultaAtraso=1, percentualJurosDia=0.2, dataLiquidacao=null, valorRecebido=null, estado=AGUARDANDO]
 2018-08-30 22:17:42 INFO  ProcessadorRemessa:102 - 77cliente2@email.com                                                                                                                                                                                0007
+2018-08-30 22:24:39 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:24:40 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:24:40 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:24:40 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:24:40 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:24:40 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:24:40 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:24:40 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:24:41 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:24:41 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:24:41 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:24:41 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:24:41 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:24:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:24:42 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:24:42 INFO  CabecalhoRemessa:45 - Remessa [id=e62a4e9930b040ae962d2b650eeb5f9e, sequencia=1, convenio=Convenio [id=488275e169b54fb8804627c176efdcc2, numero=0000000001, cedente=Cedente [id=c5a101ffc9ab4d308cbda543a59eaf70, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:24:42 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:24:42 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:25:09 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:25:10 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:25:10 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:25:10 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:25:10 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:25:10 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:25:10 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:25:10 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:25:11 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:25:11 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:25:11 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:25:11 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:25:11 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:25:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:25:12 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:25:12 INFO  CabecalhoRemessa:45 - Remessa [id=7ec7b4aa44b2465d8e3b04789788f535, sequencia=1, convenio=Convenio [id=09a66b3aca5241179312131dc0bd3a9a, numero=0000000001, cedente=Cedente [id=6a85203c664c436caa6afbc1c5a9c005, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:25:12 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:25:12 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:26:19 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:26:19 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:26:20 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:26:20 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:26:20 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:26:20 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:26:20 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:26:20 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:26:21 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:26:21 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:26:21 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:26:21 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:26:21 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:26:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:26:22 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:26:22 INFO  CabecalhoRemessa:45 - Remessa [id=a2a29369cdd54d809264bb33d0fb196b, sequencia=1, convenio=Convenio [id=fb54c854109847efa46fce6f706934c5, numero=0000000001, cedente=Cedente [id=e5f424b3dbda4ca4931564ad8800678c, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:26:22 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:26:22 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:26:22 INFO  PersisteTituloObserver:30 - Título persistido com sucesso!
+2018-08-30 22:26:22 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:28:26 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:28:27 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:28:27 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:28:27 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:28:27 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:28:27 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:28:27 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:28:27 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:28:28 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:28:28 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:28:28 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:28:28 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:28:28 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:28:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:28:29 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:28:29 INFO  CabecalhoRemessa:45 - Remessa [id=595b5272687147eca8be9423722cedf5, sequencia=1, convenio=Convenio [id=7d9b1dc528a446ec84a511d1b78d6ccc, numero=0000000001, cedente=Cedente [id=e6f2aaac57514d9f91f347cee2ee78de, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:28:29 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:28:29 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:28:29 WARN  UnresolvedEntityInsertActions:145 - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([com.github.flaviodev.refactoring.model.Sacado#<null>])
+	Dependent entities: ([[com.github.flaviodev.refactoring.model.TituloCobranca#7d2f22b6a0bd4c7cacd35cd77e9d1a37]])
+	Non-nullable association(s): ([com.github.flaviodev.refactoring.model.TituloCobranca.sacado])
+2018-08-30 22:29:26 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:29:26 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:29:26 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:29:26 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:29:26 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:29:26 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:29:26 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:29:26 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:29:27 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:29:27 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:29:27 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:29:27 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:29:27 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:29:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:29:28 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:29:28 INFO  CabecalhoRemessa:45 - Remessa [id=69dbc2c60566417e98396a6ef75f7ded, sequencia=1, convenio=Convenio [id=eee2b7112e8e40dab1b9eef5345a116f, numero=0000000001, cedente=Cedente [id=aa0199cd1bd7452597df2385dae58f5a, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:29:28 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:29:28 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:29:28 INFO  PersisteTituloObserver:30 - Título persistido com sucesso!
+2018-08-30 22:29:28 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:29:28 INFO  PersisteTituloObserver:30 - Título persistido com sucesso!
+2018-08-30 22:29:28 INFO  ProcessadorRemessa:102 - 07    123456CLIENTE LTDA                                                                                11888555000133010120180000010000                                                            0002
+2018-08-30 22:29:28 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:32:16 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:32:17 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:32:17 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:32:17 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:32:17 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:32:17 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:32:17 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:32:17 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:32:18 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:32:18 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:32:18 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:32:18 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:32:18 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:32:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:32:19 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:32:19 INFO  CabecalhoRemessa:45 - Remessa [id=9c56fcb33a1a4cceb3eff75e57a6ec21, sequencia=1, convenio=Convenio [id=aad6d80056e8495a803285893964978d, numero=0000000001, cedente=Cedente [id=51d35f68d48146c69c4541cef8a74360, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:32:19 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:32:19 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:32:19 INFO  PersisteTituloObserver:30 - Título persistido com sucesso!
+2018-08-30 22:32:19 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:32:19 INFO  PersisteTituloObserver:30 - Título persistido com sucesso!
+2018-08-30 22:32:19 INFO  ProcessadorRemessa:102 - 07    123456CLIENTE LTDA                                                                                11888555000133010120180000010000                                                            0002
+2018-08-30 22:32:19 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:32:19 INFO  PersisteTituloObserver:30 - Título persistido com sucesso!
+2018-08-30 22:32:19 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:32:19 INFO  PersisteTituloObserver:30 - Título persistido com sucesso!
+2018-08-30 22:32:19 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:32:19 INFO  PersisteTituloObserver:30 - Título persistido com sucesso!
+2018-08-30 22:32:19 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0003
+2018-08-30 22:32:19 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:32:19 INFO  PersisteTituloObserver:30 - Título persistido com sucesso!
+2018-08-30 22:32:19 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:33:04 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:33:04 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:33:04 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:33:04 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:33:04 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:33:04 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:33:05 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:33:05 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:33:06 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:33:06 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:33:06 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:33:06 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:33:06 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:33:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:33:06 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:33:06 INFO  CabecalhoRemessa:45 - Remessa [id=54bb0d3ce2dc4d7eb5e1300d433dde71, sequencia=1, convenio=Convenio [id=9c58ade31a2e4ac6bcef70619d68f8c7, numero=0000000001, cedente=Cedente [id=bba3a6a6c5374913ae89af312a3fff09, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:33:06 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:33:06 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:33:06 INFO  PersisteTituloObserver:31 - Título persistido com sucesso!
+2018-08-30 22:33:06 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:33:06 INFO  PersisteTituloObserver:31 - Título persistido com sucesso!
+2018-08-30 22:33:06 INFO  ProcessadorRemessa:102 - 07    123456CLIENTE LTDA                                                                                11888555000133010120180000010000                                                            0002
+2018-08-30 22:33:06 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:33:06 INFO  PersisteTituloObserver:31 - Título persistido com sucesso!
+2018-08-30 22:33:06 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:33:06 INFO  PersisteTituloObserver:31 - Título persistido com sucesso!
+2018-08-30 22:33:06 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:33:06 INFO  PersisteTituloObserver:31 - Título persistido com sucesso!
+2018-08-30 22:33:06 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0003
+2018-08-30 22:33:06 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:33:06 INFO  PersisteTituloObserver:31 - Título persistido com sucesso!
+2018-08-30 22:33:06 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:34:04 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:34:05 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:34:05 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:34:05 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:34:05 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:34:05 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:34:05 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:34:05 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:34:06 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:34:06 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:34:06 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:34:06 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:34:06 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:34:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:34:07 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:34:07 INFO  CabecalhoRemessa:45 - Remessa [id=1e0fab1c0a4343d68b495f7bd9f8aa97, sequencia=1, convenio=Convenio [id=e9dbeeb12909469caf59f3a4a5cc0840, numero=0000000001, cedente=Cedente [id=dd3c305a60c44a4782a2f5523b0474f7, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:34:07 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:34:07 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:34:07 WARN  UnresolvedEntityInsertActions:145 - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([com.github.flaviodev.refactoring.model.Sacado#<null>])
+	Dependent entities: ([[com.github.flaviodev.refactoring.model.TituloCobranca#c182f5cc010a420b9750d02075a36e8f]])
+	Non-nullable association(s): ([com.github.flaviodev.refactoring.model.TituloCobranca.sacado])
+2018-08-30 22:34:47 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:34:47 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:34:47 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:34:47 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:34:47 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:34:47 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:34:47 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:34:47 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:34:48 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:34:48 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:34:48 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:34:48 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:34:48 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:34:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:34:49 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:34:49 INFO  CabecalhoRemessa:45 - Remessa [id=0708dffcc52b458d8952c80d1936d03f, sequencia=1, convenio=Convenio [id=14a1598ba89f4f8c8f858f2d3625b3b7, numero=0000000001, cedente=Cedente [id=43c07eb35ad443219ede2b7039efd768, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:34:49 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:34:49 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:34:49 INFO  PersisteTituloObserver:31 - Título persistido com sucesso!
+2018-08-30 22:34:49 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:35:48 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:35:49 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:35:49 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:35:49 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:35:49 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:35:49 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:35:49 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:35:49 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:35:50 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:35:50 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:35:50 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:35:50 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:35:50 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:35:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:35:51 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:35:51 INFO  CabecalhoRemessa:45 - Remessa [id=ddfae77f8ab645f08a570782aded8eea, sequencia=1, convenio=Convenio [id=241d7b247867461aaf699afa091b4e17, numero=0000000001, cedente=Cedente [id=36c924783ec447d6bffb1b8faf2bf39c, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:35:51 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:35:51 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:35:51 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:35:51 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:35:51 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:35:51 INFO  ProcessadorRemessa:102 - 07    123456CLIENTE LTDA                                                                                11888555000133010120180000010000                                                            0002
+2018-08-30 22:35:51 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:35:51 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:35:51 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:35:51 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:35:51 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:35:51 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:35:51 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0003
+2018-08-30 22:35:51 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:35:51 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:35:51 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:36:10 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:36:10 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:36:10 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:36:10 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:36:10 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:36:10 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:36:11 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:36:11 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:36:12 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:36:12 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:36:12 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:36:12 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:36:12 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:36:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:36:12 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:36:12 INFO  CabecalhoRemessa:45 - Remessa [id=7a2d490e155e49d1a9a0314fa1271551, sequencia=1, convenio=Convenio [id=55938352109f4a76badd293a205c2048, numero=0000000001, cedente=Cedente [id=32f0319ae4d443b9af4c7d50b225510c, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:36:12 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:36:12 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:36:12 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:36:12 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:36:12 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:36:12 INFO  ProcessadorRemessa:102 - 07    123456CLIENTE LTDA                                                                                11888555000133010120180000010000                                                            0002
+2018-08-30 22:36:12 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:36:12 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:36:12 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:36:12 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:36:12 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:36:12 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:36:12 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0003
+2018-08-30 22:36:12 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:36:12 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:36:12 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:39:25 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:39:26 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:39:26 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:39:26 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:39:26 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:39:26 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:39:26 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:39:26 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:39:27 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:39:27 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:39:27 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:39:27 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:39:27 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:39:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:39:28 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:39:28 INFO  CabecalhoRemessa:45 - Remessa [id=1296700a0dd44c6a8caa11effb6c53f8, sequencia=1, convenio=Convenio [id=27b0cf6a58bb48039b6556e90a7b9e16, numero=0000000001, cedente=Cedente [id=78978b69d5cb4ec3975851fd7f29d08e, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:39:28 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:39:28 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:39:28 INFO  PersisteTituloObserver:35 - Título persistido com sucesso!
+2018-08-30 22:39:28 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:40:12 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:40:12 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:40:12 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:40:12 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:40:12 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:40:12 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:40:12 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:40:13 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:40:13 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:40:13 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:40:13 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:40:13 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:40:13 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:40:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:40:14 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:40:14 INFO  CabecalhoRemessa:45 - Remessa [id=1064c9c4117d4f21831f3ad8b5d3374e, sequencia=1, convenio=Convenio [id=0edfcc5e3c6e43078f1eb75a0c489804, numero=0000000001, cedente=Cedente [id=7f5209a5e5944139bc5ea1d7a029b956, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:40:14 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:40:14 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:40:14 INFO  PersisteTituloObserver:36 - Título persistido com sucesso!
+2018-08-30 22:40:14 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:40:14 INFO  PersisteTituloObserver:36 - Título persistido com sucesso!
+2018-08-30 22:40:14 INFO  ProcessadorRemessa:102 - 07    123456CLIENTE LTDA                                                                                11888555000133010120180000010000                                                            0002
+2018-08-30 22:40:14 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:40:14 INFO  PersisteTituloObserver:36 - Título persistido com sucesso!
+2018-08-30 22:40:14 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:40:14 INFO  PersisteTituloObserver:36 - Título persistido com sucesso!
+2018-08-30 22:40:14 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:40:14 INFO  PersisteTituloObserver:36 - Título persistido com sucesso!
+2018-08-30 22:40:14 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0003
+2018-08-30 22:40:14 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:40:14 INFO  PersisteTituloObserver:36 - Título persistido com sucesso!
+2018-08-30 22:40:14 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:46:16 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:46:17 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:46:17 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:46:17 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:46:17 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:46:17 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:46:17 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:46:17 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:46:18 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:46:18 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:46:18 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:46:18 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:46:18 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:46:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:46:19 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:46:19 INFO  CabecalhoRemessa:45 - Remessa [id=94eec53e7c354cfbb13112426eaed668, sequencia=1, convenio=Convenio [id=7bc2e164133441f78108fe13c4447dff, numero=0000000001, cedente=Cedente [id=790b0487e86d4c71adce6d6c2b5803a4, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:46:19 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:46:19 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:46:19 INFO  PersisteTituloObserver:35 - Título persistido com sucesso!
+2018-08-30 22:46:19 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:46:19 INFO  PersisteTituloObserver:35 - Título persistido com sucesso!
+2018-08-30 22:46:19 INFO  ProcessadorRemessa:102 - 07    123456CLIENTE LTDA                                                                                11888555000133010120180000010000                                                            0002
+2018-08-30 22:46:19 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:46:19 INFO  PersisteTituloObserver:35 - Título persistido com sucesso!
+2018-08-30 22:46:19 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:46:19 INFO  PersisteTituloObserver:35 - Título persistido com sucesso!
+2018-08-30 22:46:19 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:46:19 INFO  PersisteTituloObserver:35 - Título persistido com sucesso!
+2018-08-30 22:46:19 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0003
+2018-08-30 22:46:19 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:46:19 INFO  PersisteTituloObserver:35 - Título persistido com sucesso!
+2018-08-30 22:46:19 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:48:48 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:48:49 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:48:49 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:48:49 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:48:49 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:48:49 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:48:49 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:48:49 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:48:50 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:48:50 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:48:50 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:48:50 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:48:50 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:48:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:48:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:48:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:48:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:48:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:48:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:48:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:48:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:48:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:48:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:48:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:48:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:48:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:48:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:48:51 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:48:51 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:48:51 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:48:51 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:48:51 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:48:51 INFO  CabecalhoRemessa:45 - Remessa [id=f68626e52b504a8aa6852a186ac4be45, sequencia=1, convenio=Convenio [id=789b41a4684d49c18ce78f107ccd9564, numero=0000000001, cedente=Cedente [id=67142e449eb44696ab263e7a3741ca8e, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:48:51 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:48:51 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:48:51 INFO  PersisteTituloObserver:36 - Título persistido com sucesso!
+2018-08-30 22:48:51 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:48:51 INFO  PersisteTituloObserver:36 - Título persistido com sucesso!
+2018-08-30 22:48:51 INFO  ProcessadorRemessa:102 - 07    123456CLIENTE LTDA                                                                                11888555000133010120180000010000                                                            0002
+2018-08-30 22:48:51 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:48:51 INFO  PersisteTituloObserver:36 - Título persistido com sucesso!
+2018-08-30 22:48:51 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:48:51 INFO  PersisteTituloObserver:36 - Título persistido com sucesso!
+2018-08-30 22:48:51 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:48:51 INFO  PersisteTituloObserver:36 - Título persistido com sucesso!
+2018-08-30 22:48:51 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0003
+2018-08-30 22:48:51 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:48:51 INFO  PersisteTituloObserver:36 - Título persistido com sucesso!
+2018-08-30 22:48:51 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:27 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:49:28 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:49:28 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:49:28 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:49:28 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:49:28 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:49:28 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:49:28 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:49:29 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:49:29 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:49:29 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:49:29 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:49:29 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:49:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:49:30 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:49:30 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:49:30 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:49:30 INFO  CabecalhoRemessa:45 - Remessa [id=2afcb5bf0db34d11babdc6372222d0d1, sequencia=1, convenio=Convenio [id=1c12767b7c7347c7a5bc86e021505e42, numero=0000000001, cedente=Cedente [id=0167cb321aa54bd2bb5490afd3f21424, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:49:30 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  ProcessadorRemessa:102 - 07    123456CLIENTE LTDA                                                                                11888555000133010120180000010000                                                            0002
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0003
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  DetalheRemessaEmail:33 - TituloCobranca [id=08031b27b45942f18325b2483512aba3, numero=123456, remessa=Remessa [id=2afcb5bf0db34d11babdc6372222d0d1, sequencia=1, convenio=Convenio [id=1c12767b7c7347c7a5bc86e021505e42, numero=0000000001, cedente=Cedente [id=0167cb321aa54bd2bb5490afd3f21424, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018], sacado=Sacado [id=bc95b9ed92294b6c9603630f8f311d81, nomeRazaoSocial=CLIENTE LTDA, cpfCnpj=11888555000133, email=cliente@email.com], dataVencimento=Mon Jan 01 00:00:00 BRST 2018, valor=100, valorMultaAtraso=1, percentualJurosDia=0.2, dataLiquidacao=null, valorRecebido=null, estado=AGUARDANDO]
+2018-08-30 22:49:30 INFO  ProcessadorRemessa:102 - 77cliente@email.com                                                                                                                                                                                 0004
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  ProcessadorRemessa:102 - 07    123457CLIENTE2 LTDA                                                                               11888555000122010120180000010000                                                            0005
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0006
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:49:30 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:49:30 INFO  DetalheRemessaEmail:33 - TituloCobranca [id=1303f334cf9a4968b29d84e689b6b0b7, numero=123457, remessa=Remessa [id=2afcb5bf0db34d11babdc6372222d0d1, sequencia=1, convenio=Convenio [id=1c12767b7c7347c7a5bc86e021505e42, numero=0000000001, cedente=Cedente [id=0167cb321aa54bd2bb5490afd3f21424, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018], sacado=Sacado [id=2e8fbf0e17764a4d82c11d787ca45b5b, nomeRazaoSocial=CLIENTE2 LTDA, cpfCnpj=11888555000122, email=cliente2@email.com], dataVencimento=Mon Jan 01 00:00:00 BRST 2018, valor=100, valorMultaAtraso=1, percentualJurosDia=0.2, dataLiquidacao=null, valorRecebido=null, estado=AGUARDANDO]
+2018-08-30 22:49:30 INFO  ProcessadorRemessa:102 - 77cliente2@email.com                                                                                                                                                                                0007
+2018-08-30 22:50:53 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:50:53 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:50:53 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:50:53 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:50:53 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:50:53 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:50:53 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:50:54 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:50:55 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:50:55 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:50:55 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:50:55 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:50:55 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:50:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:50:55 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:50:55 INFO  CabecalhoRemessa:45 - Remessa [id=476c365aae9d489b866da7bbeec94a54, sequencia=1, convenio=Convenio [id=8537804d33dd4033820ef66a8126f463, numero=0000000001, cedente=Cedente [id=55aff903966c4ac2a348b0f51293504e, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:50:55 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:50:55 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:50:55 WARN  UnresolvedEntityInsertActions:145 - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([com.github.flaviodev.refactoring.model.Sacado#<null>])
+	Dependent entities: ([[com.github.flaviodev.refactoring.model.TituloCobranca#e4f1db0e90f44aba802a541345b0ef76]])
+	Non-nullable association(s): ([com.github.flaviodev.refactoring.model.TituloCobranca.sacado])
+2018-08-30 22:52:17 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:52:18 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:52:18 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:52:18 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:52:18 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:52:18 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:52:18 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:52:18 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:52:19 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:52:19 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:52:19 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:52:19 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:52:19 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:52:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:52:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:52:20 INFO  PersisteRemessaObserver:31 - Remessa persistida com sucesso!
+2018-08-30 22:52:20 INFO  CabecalhoRemessa:45 - Remessa [id=5b349398a6fb42afbf891e156b1b3cc0, sequencia=1, convenio=Convenio [id=2086f727c7514cde90a6c00146b5bd87, numero=0000000001, cedente=Cedente [id=ee67228db64a4c5389b92bd0dc1bcef9, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:52:20 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  ProcessadorRemessa:102 - 07    123456CLIENTE LTDA                                                                                11888555000133010120180000010000                                                            0002
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0003
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  DetalheRemessaEmail:33 - TituloCobranca [id=4ecf538aae9c43e58b018bf9b44cef8a, numero=123456, remessa=Remessa [id=5b349398a6fb42afbf891e156b1b3cc0, sequencia=1, convenio=Convenio [id=2086f727c7514cde90a6c00146b5bd87, numero=0000000001, cedente=Cedente [id=ee67228db64a4c5389b92bd0dc1bcef9, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018], sacado=Sacado [id=a3ebbbe30fba478bb0c2813a2aec3b3f, nomeRazaoSocial=CLIENTE LTDA, cpfCnpj=11888555000133, email=cliente@email.com], dataVencimento=Mon Jan 01 00:00:00 BRST 2018, valor=100, valorMultaAtraso=1, percentualJurosDia=0.2, dataLiquidacao=null, valorRecebido=null, estado=AGUARDANDO]
+2018-08-30 22:52:20 INFO  ProcessadorRemessa:102 - 77cliente@email.com                                                                                                                                                                                 0004
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  ProcessadorRemessa:102 - 07    123457CLIENTE2 LTDA                                                                               11888555000122010120180000010000                                                            0005
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0006
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:52:20 INFO  PersisteTituloObserver:34 - Título persistido com sucesso!
+2018-08-30 22:52:20 INFO  DetalheRemessaEmail:33 - TituloCobranca [id=689ef9b77fda4f99b984c5b3fd462fc7, numero=123457, remessa=Remessa [id=5b349398a6fb42afbf891e156b1b3cc0, sequencia=1, convenio=Convenio [id=2086f727c7514cde90a6c00146b5bd87, numero=0000000001, cedente=Cedente [id=ee67228db64a4c5389b92bd0dc1bcef9, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018], sacado=Sacado [id=e7de725097404393bc493879abb3c125, nomeRazaoSocial=CLIENTE2 LTDA, cpfCnpj=11888555000122, email=cliente2@email.com], dataVencimento=Mon Jan 01 00:00:00 BRST 2018, valor=100, valorMultaAtraso=1, percentualJurosDia=0.2, dataLiquidacao=null, valorRecebido=null, estado=AGUARDANDO]
+2018-08-30 22:52:20 INFO  ProcessadorRemessa:102 - 77cliente2@email.com                                                                                                                                                                                0007
+2018-08-30 22:54:57 INFO  PersisteRemessaObserver:19 - Persistindo remessa ... 
+2018-08-30 22:54:57 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dpPu
+	...]
+2018-08-30 22:54:57 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-08-30 22:54:57 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-30 22:54:57 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-08-30 22:54:57 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 22:54:57 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-08-30 22:54:57 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-08-30 22:54:58 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-30 22:54:58 INFO  connections:127 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:dp]
+2018-08-30 22:54:58 INFO  connections:136 - HHH10001001: Connection properties: {user=sa}
+2018-08-30 22:54:58 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2018-08-30 22:54:58 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Cedente
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Convenio
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Remessa_TituloCobranca
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: Sacado
+2018-08-30 22:54:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:365 - HHH000262: Table not found: TituloCobranca
+2018-08-30 22:54:59 INFO  PersisteRemessaObserver:34 - Remessa persistida com sucesso!
+2018-08-30 22:54:59 INFO  CabecalhoRemessa:45 - Remessa [id=1ffc2f73131a4e43acaf77a3eb9aa89d, sequencia=1, convenio=Convenio [id=3aec18779953492797625c47b8a77441, numero=0000000001, cedente=Cedente [id=53783a608876463491421cde01f7fad2, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018]
+2018-08-30 22:54:59 INFO  ProcessadorRemessa:102 - 01000000010000000001EMPRESA LTDA                                                                               10222333000155001BANCO DO BRASIL     1234X    12345601012018                         0001
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  ProcessadorRemessa:102 - 07    123456CLIENTE LTDA                                                                                11888555000133010120180000010000                                                            0002
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0003
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  DetalheRemessaEmail:33 - TituloCobranca [id=93eba3c7df924de9b1d02c1b25c8cdf6, numero=123456, remessa=Remessa [id=1ffc2f73131a4e43acaf77a3eb9aa89d, sequencia=1, convenio=Convenio [id=3aec18779953492797625c47b8a77441, numero=0000000001, cedente=Cedente [id=53783a608876463491421cde01f7fad2, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018], sacado=Sacado [id=8a0f6410e4a14abab38a2e60b80f88ff, nomeRazaoSocial=CLIENTE LTDA, cpfCnpj=11888555000133, email=cliente@email.com], dataVencimento=Mon Jan 01 00:00:00 BRST 2018, valor=100, valorMultaAtraso=1, percentualJurosDia=0.2, dataLiquidacao=null, valorRecebido=null, estado=AGUARDANDO]
+2018-08-30 22:54:59 INFO  ProcessadorRemessa:102 - 77cliente@email.com                                                                                                                                                                                 0004
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  ProcessadorRemessa:102 - 07    123457CLIENTE2 LTDA                                                                               11888555000122010120180000010000                                                            0005
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  ProcessadorRemessa:102 - 0500000001000000000020                                                                                                                                                                              0006
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:18 - Persistindo título ... 
+2018-08-30 22:54:59 INFO  PersisteTituloObserver:33 - Título persistido com sucesso!
+2018-08-30 22:54:59 INFO  DetalheRemessaEmail:33 - TituloCobranca [id=eee3d3be3d1d46b2822906ae3689f7a9, numero=123457, remessa=Remessa [id=1ffc2f73131a4e43acaf77a3eb9aa89d, sequencia=1, convenio=Convenio [id=3aec18779953492797625c47b8a77441, numero=0000000001, cedente=Cedente [id=53783a608876463491421cde01f7fad2, nomeRazaoSocial=EMPRESA LTDA, cpfCnpj=10222333000155], banco=BANCO_DO_BRASIL, agencia=1234X, conta=123456], data=Mon Jan 01 00:00:00 BRST 2018], sacado=Sacado [id=1e5e71e2d1694c1589e682b1be4925a1, nomeRazaoSocial=CLIENTE2 LTDA, cpfCnpj=11888555000122, email=cliente2@email.com], dataVencimento=Mon Jan 01 00:00:00 BRST 2018, valor=100, valorMultaAtraso=1, percentualJurosDia=0.2, dataLiquidacao=null, valorRecebido=null, estado=AGUARDANDO]
+2018-08-30 22:54:59 INFO  ProcessadorRemessa:102 - 77cliente2@email.com                                                                                                                                                                                0007

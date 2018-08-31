@@ -22,36 +22,42 @@ public class PersisteRemessaObserver implements EntidadeBaseObserver<String, Rem
 
 		em.getTransaction().begin();
 
-		persisteConvenio(remessa.getConvenio(), em);
+		remessa.setConvenio(persisteConvenio(remessa.getConvenio(), em));
 
-		em.persist(remessa);
+		if (remessa.isTransient())
+			em.persist(remessa);
+		else
+			em.merge(remessa);
 
 		em.getTransaction().commit();
 
 		logger.info("Remessa persistida com sucesso!");
 	}
 
-	private void persisteConvenio(Convenio convenio, EntityManager em) {
+	private Convenio persisteConvenio(Convenio convenio, EntityManager em) {
 
 		if (convenio == null)
-			return;
+			return null;
 
-		persisteCedente(convenio.getCedente(), em);
+		convenio.setCedente(persisteCedente(convenio.getCedente(), em));
 
 		if (convenio.isTransient())
 			em.persist(convenio);
 		else
-			em.merge(convenio);
+			convenio = em.merge(convenio);
+
+		return convenio;
 	}
 
-	private void persisteCedente(Cedente cedente, EntityManager em) {
+	private Cedente persisteCedente(Cedente cedente, EntityManager em) {
 		if (cedente == null)
-			return;
+			return null;
 
 		if (cedente.isTransient())
 			em.persist(cedente);
 		else
-			em.merge(cedente);
-	}
+			cedente = em.merge(cedente);
 
+		return cedente;
+	}
 }

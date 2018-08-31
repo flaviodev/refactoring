@@ -9,7 +9,7 @@ public class ProcessadorRemessaTest {
 	@Test
 	public void deveCalcularImpostoSimples() {
 		ProcessadorRemessa processador = ProcessadorRemessa.get();
-		
+
 		processador.processaRemessa(getClass().getClassLoader().getResourceAsStream("CB01012018.REM"));
 	}
 
