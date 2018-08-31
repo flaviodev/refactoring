@@ -102,9 +102,6 @@ public class ProcessadorRemessa {
 				case DETALHE_REMESSA:
 					detalheRemessa.setRegistroDoArquivo(linha);
 					detalheRemessa.setRegistroVinculado((CabecalhoRemessa) utltimoRegistroPorTipo.get(TipoRegistro.CABECALHO_REMESSA));
-//					detalheRemessa
-//							.setRemessa(((CabecalhoRemessa) utltimoRegistroPorTipo.get(TipoRegistro.CABECALHO_REMESSA))
-//									.getRemessa());
 					detalheRemessa.processaRegistroArquivo();
 					registro = detalheRemessa;
 					break;

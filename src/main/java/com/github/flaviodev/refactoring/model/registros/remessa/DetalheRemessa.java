@@ -26,17 +26,12 @@ public class DetalheRemessa extends Detalhe {
 		getBuilderRegistro().adicionaAcaoAoConstruir(new PersisteTituloObserver());
 	}
 
-	public void setRemessa(Remessa remessa) {
-		getBuilderRegistro().naRemessa(remessa);
-	}
-
 	@SuppressWarnings("rawtypes")
 	@Override
 	public void setRegistroVinculado(Registro registroVinculado) {
 		if (registroVinculado instanceof CabecalhoRemessa)
 			getBuilderRegistro().naRemessa(((CabecalhoRemessa) registroVinculado).getRemessa());
 
-//		super.setRegistroVinculado(registroVinculado);
 	}
 
 	@Override

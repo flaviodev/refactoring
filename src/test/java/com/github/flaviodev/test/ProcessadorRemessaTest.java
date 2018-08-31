@@ -14,9 +14,23 @@ public class ProcessadorRemessaTest {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void deveProcessarRemessa() {
+	public void deveProcessarRemessaBancoDoBrasil() {
 		ProcessadorRemessa processador = new ProcessadorRemessa(
 				getClass().getClassLoader().getResourceAsStream("CB01012018.REM"));
+
+		processador.processaRemessa();
+
+		logger.info("\n\n--------------------------------------------------------------------------\n\n");
+
+		JPAUtil.createCriteria(Remessa.class).list().forEach(logger::info);
+		JPAUtil.createCriteria(TituloCobranca.class).list().forEach(logger::info);
+	}
+	
+	@SuppressWarnings("unchecked")
+	@Test
+	public void deveProcessarRemessaCaixa() {
+		ProcessadorRemessa processador = new ProcessadorRemessa(
+				getClass().getClassLoader().getResourceAsStream("CC01012018.REM"));
 
 		processador.processaRemessa();
 
