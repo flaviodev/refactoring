@@ -7,9 +7,11 @@
 	<persistence-unit name="dpPu" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-		<class>com.github.flaviodev.dp.model.Cliente</class>
-		<class>com.github.flaviodev.dp.model.Orcamento</class>
-		<class>com.github.flaviodev.dp.model.ItemOrcamento</class>
+		<class>com.github.flaviodev.refactoring.model.Cedente</class>
+		<class>com.github.flaviodev.refactoring.model.Convenio</class>
+		<class>com.github.flaviodev.refactoring.model.Sacado</class>
+		<class>com.github.flaviodev.refactoring.model.Remessa</class>
+		<class>com.github.flaviodev.refactoring.model.TituloCobranca</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:dp" />
@@ -21,8 +23,9 @@
 			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
 			<property name="hibernate.show_sql" value="false" />
 			<property name="hibernate.format_sql" value="true" />
-			<property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+			<property name="hibernate.temp.use_jdbc_metadata_defaults"
+				value="false" />
 		</properties>
-		
+
 	</persistence-unit>
 </persistence>

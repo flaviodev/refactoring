@@ -32,7 +32,7 @@ public class Orcamento extends EntidadeBase<String> {
 
 	@Id
 	@GeneratedValue(generator = "UUIDGenerator")
-	@GenericGenerator(name = "UUIDGenerator", strategy = "com.github.flaviodev.dp.model.base.UUIDGenerator")
+	@GenericGenerator(name = "UUIDGenerator", strategy = "com.github.flaviodev.refactoring.model.base.UUIDGenerator")
 	@Column(name = "id_orcamento", length = 32)
 	private String id;
 
