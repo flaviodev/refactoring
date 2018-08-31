@@ -2,7 +2,7 @@ package com.github.flaviodev.test;
 
 import org.junit.Test;
 
-import com.github.flaviodev.dp.model.registros.ProcessadorRemessa;
+import com.github.flaviodev.refactoring.model.registros.ProcessadorRemessa;
 
 public class ProcessadorRemessaTest {
 

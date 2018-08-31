@@ -1,8 +1,8 @@
 package com.github.flaviodev.test;
 
-import com.github.flaviodev.dp.builder.OrcamentoBuilder;
-import com.github.flaviodev.dp.model.ItemOrcamento;
-import com.github.flaviodev.dp.model.Sacado;
+import com.github.flaviodev.refactoring.builder.OrcamentoBuilder;
+import com.github.flaviodev.refactoring.model.ItemOrcamento;
+import com.github.flaviodev.refactoring.model.Sacado;
 
 public class FabricaTest {
 

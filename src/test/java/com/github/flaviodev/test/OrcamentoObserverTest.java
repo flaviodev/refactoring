@@ -5,12 +5,12 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.github.flaviodev.dp.builder.OrcamentoBuilder;
-import com.github.flaviodev.dp.model.ItemOrcamento;
-import com.github.flaviodev.dp.model.Orcamento;
-import com.github.flaviodev.dp.observer.EnviaOrcamentoPorEmail;
-import com.github.flaviodev.dp.observer.ImprimeOrcamento;
-import com.github.flaviodev.dp.observer.PersisteOrcamento;
+import com.github.flaviodev.refactoring.builder.OrcamentoBuilder;
+import com.github.flaviodev.refactoring.model.ItemOrcamento;
+import com.github.flaviodev.refactoring.model.Orcamento;
+import com.github.flaviodev.refactoring.observer.EnviaOrcamentoPorEmail;
+import com.github.flaviodev.refactoring.observer.ImprimeOrcamento;
+import com.github.flaviodev.refactoring.observer.PersisteOrcamento;
 
 public class OrcamentoObserverTest {
 
