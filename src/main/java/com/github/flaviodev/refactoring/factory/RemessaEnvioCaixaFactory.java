@@ -9,7 +9,7 @@ import com.github.flaviodev.refactoring.model.registros.remessa.caixa.DetalheRem
 import com.github.flaviodev.refactoring.model.registros.remessa.caixa.DetalheRemessaEmailCaixa;
 import com.github.flaviodev.refactoring.model.registros.remessa.caixa.DetalheRemessaMultaCaixa;
 
-public class RemessaCaixaFactory implements RemessaFactory {
+public class RemessaEnvioCaixaFactory implements RemessaEnvioFactory {
 
 	@Override
 	public CabecalhoRemessa criaCabecalhoRemessa() {

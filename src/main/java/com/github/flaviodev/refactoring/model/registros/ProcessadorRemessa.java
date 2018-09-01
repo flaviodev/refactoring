@@ -11,7 +11,7 @@ import java.util.EnumMap;
 
 import org.apache.log4j.Logger;
 
-import com.github.flaviodev.refactoring.factory.RemessaFactory;
+import com.github.flaviodev.refactoring.factory.RemessaEnvioFactory;
 import com.github.flaviodev.refactoring.model.registros.base.Cabecalho;
 import com.github.flaviodev.refactoring.model.registros.base.Registro;
 import com.github.flaviodev.refactoring.tipo.Banco;
@@ -24,7 +24,7 @@ public class ProcessadorRemessa {
 
 	private EnumMap<TipoRegistro, Registro> utltimoRegistroPorTipo = new EnumMap<>(TipoRegistro.class);
 	private InputStreamReader inputStreamReaderRemessa;
-	private RemessaFactory remessaFactory;
+	private RemessaEnvioFactory remessaFactory;
 
 	public ProcessadorRemessa(InputStreamReader inputStreamReaderRemessa) {
 		if (inputStreamReaderRemessa == null)

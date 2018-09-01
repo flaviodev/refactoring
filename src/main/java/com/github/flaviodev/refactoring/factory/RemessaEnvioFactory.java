@@ -7,7 +7,7 @@ import com.github.flaviodev.refactoring.model.registros.remessa.DetalheRemessaEm
 import com.github.flaviodev.refactoring.model.registros.remessa.DetalheRemessaMulta;
 import com.github.flaviodev.refactoring.tipo.TipoRegistro;
 
-public interface RemessaFactory {
+public interface RemessaEnvioFactory {
 	public abstract CabecalhoRemessa criaCabecalhoRemessa();
 
 	public abstract DetalheRemessa criaDetalheRemessa();

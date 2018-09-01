@@ -1,18 +1,18 @@
 package com.github.flaviodev.refactoring.tipo;
 
-import com.github.flaviodev.refactoring.factory.RemessaBancoDoBrasilFactory;
-import com.github.flaviodev.refactoring.factory.RemessaCaixaFactory;
-import com.github.flaviodev.refactoring.factory.RemessaFactory;
+import com.github.flaviodev.refactoring.factory.RemessaEnvioBancoDoBrasilFactory;
+import com.github.flaviodev.refactoring.factory.RemessaEnvioCaixaFactory;
+import com.github.flaviodev.refactoring.factory.RemessaEnvioFactory;
 
 public enum Banco {
-	BANCO_DO_BRASIL("001", "Banco do Brasil", RemessaBancoDoBrasilFactory.class), CAIXA_ECONOMICA("104",
-			"Caixa Econômica Federal", RemessaCaixaFactory.class);
+	BANCO_DO_BRASIL("001", "Banco do Brasil", RemessaEnvioBancoDoBrasilFactory.class), CAIXA_ECONOMICA("104",
+			"Caixa Econômica Federal", RemessaEnvioCaixaFactory.class);
 
 	private String numero;
 	private String nome;
-	private Class<? extends RemessaFactory> factory;
+	private Class<? extends RemessaEnvioFactory> factory;
 
-	private Banco(String numero, String nome, Class<? extends RemessaFactory> factory) {
+	private Banco(String numero, String nome, Class<? extends RemessaEnvioFactory> factory) {
 		this.numero = numero;
 		this.nome = nome;
 		this.factory = factory;
@@ -26,7 +26,7 @@ public enum Banco {
 		return nome;
 	}
 
-	public RemessaFactory getRemessaFactory() {
+	public RemessaEnvioFactory getRemessaFactory() {
 		try {
 			return factory.newInstance();
 		} catch (InstantiationException | IllegalAccessException e) {

@@ -9,7 +9,7 @@ import com.github.flaviodev.refactoring.model.registros.remessa.bancodobrasil.De
 import com.github.flaviodev.refactoring.model.registros.remessa.bancodobrasil.DetalheRemessaEmailBancoDoBrasil;
 import com.github.flaviodev.refactoring.model.registros.remessa.bancodobrasil.DetalheRemessaMultaBancoDoBrasil;
 
-public class RemessaBancoDoBrasilFactory implements RemessaFactory {
+public class RemessaEnvioBancoDoBrasilFactory implements RemessaEnvioFactory {
 
 	@Override
 	public CabecalhoRemessa criaCabecalhoRemessa() {
